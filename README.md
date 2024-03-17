@@ -7,3 +7,21 @@ Projekto tipas: Programą (svetainę) su Django karkasu.
 Pojekto pavadinimas: Filmų katalogas
 
 Projekto pagrindinis tikslas: Sukurti Django Web projektą "Filmų katalogas", pritaikant vasario menėsį gautas žinias. 
+
+Projekto ypatybės(features):
+
+* 
+
+Projekto planas:
+
+1) New project and app:
+    1) Projekto sukūrimas, konfiguracija
+    2) Aplikacijos sukūrimas
+2) Model and admin
+3) Views templates static
+4) Translations
+5) User Profile
+6) Generic Views
+7) Function views more
+8) Tiny MCE 
+9) Kiti
