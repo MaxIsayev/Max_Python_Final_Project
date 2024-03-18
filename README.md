@@ -14,17 +14,17 @@ Projekto ypatybės(features):
 
 Projekto planas:
 
-1) New project and app:
-    1) Projekto sukūrimas, konfiguracija
-    2) Aplikacijos sukūrimas
+1) \/ New project and app:
+    1) \/ Projekto sukūrimas, konfiguracija
+    2) \/ Aplikacijos sukūrimas
 2) Model and admin
-    1) Data modeling
-        * MovieCategory
-        * Studio
-        * Movie
-        * LIKE_TYPE_CHOICES 
-        * Movie like
-        * Studio like
+    1) \/ Data modeling
+        * \/ MovieCategory
+        * \/ Studio
+        * \/ Movie
+        * \/LIKE_TYPE_CHOICES 
+        * \/Movie like
+        * \/Studio like
     2) Custom Admin
         * MovieCategoryAdmin
         * StudioAdmin
@@ -34,9 +34,9 @@ Projekto planas:
 5) User Profile
 6) Generic Views
 7) Function views more
-8) Tiny MCE 
+8) *Tiny MCE 
 9) Kiti: 
     * profile picture 
-    * youtube link
-    * likes 
+    * *youtube link
+    * *likes 
     * paginator

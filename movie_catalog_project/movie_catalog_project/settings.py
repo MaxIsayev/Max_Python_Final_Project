@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'movie_catalog_app',
+    'tinymce',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -117,11 +118,31 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR.joinpath(STATIC_URL)
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR.joinpath(MEDIA_URL)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+TINYMCE_DEFAULT_CONFIG = {
+    "menubar": "file edit view insert format tools table help",
+    "plugins": "advlist autolink lists link image charmap anchor "
+               "searchreplace visualblocks code insertdatetime "
+               "media table paste help wordcount",
+    "toolbar": "undo redo | bold italic underline strikethrough | "
+               "fontselect fontsizeselect formatselect | "
+               "alignleft aligncenter alignright alignjustify | "
+               "outdent indent | numlist bullist checklist | "
+               "forecolor backcolor casechange permanentpen "
+               "formatpainter removeformat | pagebreak | "
+               "charmap emoticons | insertfile image media "
+               "pageembed link anchor codesample | "
+               "ltr rtl | showcomments addcomment code",
+    "custom_undo_redo_levels": 10,
+}
 
 try:
     from .local_settings import *
