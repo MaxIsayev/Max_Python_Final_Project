@@ -155,6 +155,7 @@ cython_debug/
 #other
 .vscode/
 local_settings.py
+media/
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
