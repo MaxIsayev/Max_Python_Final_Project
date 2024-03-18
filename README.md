@@ -25,10 +25,12 @@ Projekto planas:
         * \/LIKE_TYPE_CHOICES 
         * \/Movie like
         * \/Studio like
-    2) Custom Admin
-        * MovieCategoryAdmin
-        * StudioAdmin
-        * MovieAdmin
+    2) \/ Custom Admin
+        * \/ Movie Category Admin
+        * \/ Studio Admin
+        * \/ Movie Admin
+        * \/ Movie Like Admin
+        * \/ Studio Like Admin
 3) Views templates static
 4) Translations
 5) User Profile
