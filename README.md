@@ -18,10 +18,25 @@ Projekto planas:
     1) Projekto sukūrimas, konfiguracija
     2) Aplikacijos sukūrimas
 2) Model and admin
+    1) Data modeling
+        * MovieCategory
+        * Studio
+        * Movie
+        * LIKE_TYPE_CHOICES 
+        * Movie like
+        * Studio like
+    2) Custom Admin
+        * MovieCategoryAdmin
+        * StudioAdmin
+        * MovieAdmin
 3) Views templates static
 4) Translations
 5) User Profile
 6) Generic Views
 7) Function views more
 8) Tiny MCE 
-9) Kiti
+9) Kiti: 
+    * profile picture 
+    * youtube link
+    * likes 
+    * paginator
