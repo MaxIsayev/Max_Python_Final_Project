@@ -31,8 +31,14 @@ Projekto planas:
         * \/ Movie Admin
         * \/ Movie Like Admin
         * \/ Studio Like Admin
-3) Views templates static
-4) Translations
+3) *Views templates static
+    1) \/Basic View
+    2) Linking views 
+    3) Mark Done
+    4) Static CSS
+4) *Translations
+    1) Translating code
+    2) Multilingual Config
 5) User Profile
 6) Generic Views
 7) Function views more
