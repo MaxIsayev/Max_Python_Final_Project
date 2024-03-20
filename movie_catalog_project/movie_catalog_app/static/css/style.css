@@ -1,0 +1,158 @@
+body {
+    background-color: #cccccc;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: #cccccc;
+    font-family: sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    margin: 0; padding: 0;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #999999;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #666666;
+}
+
+a {
+    color: #004488;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0055cc;
+}
+
+header {
+    background-color: #999999;
+    display: flex;
+    flex-direction: row;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+header ul.nav {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-block: 0.5rem;
+    padding-inline: 0;
+    gap: 1px;
+}
+
+header ul.nav li a, header ul.nav li form button {
+    background-color: #aaaaaa;
+    display: block;
+    margin: 0;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 2px solid #004488;
+    cursor: pointer;
+    color: #004488;
+    font-size: 100%;
+}
+
+header ul.nav li a:hover, header ul.nav li form button:hover {
+    background-color: #b8b8b8;
+    border-bottom: 2px solid #0055cc;
+    color: #0055cc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    background-color: #bbbbbb;
+    border-bottom: 1px solid #888888;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+
+p, main ul {
+    padding: 0 0.5rem;
+    margin: 1rem 0;
+}
+
+main ul li {
+    border-bottom: 1px solid #999999;
+}
+
+h1:first-child, h2:first-child, h3:first-child, 
+h4:first-child, h5:first-child, h6:first-child {
+    margin-top: 0;
+}
+
+footer p {
+    color: #cccccc;
+}
+
+footer a {
+    color: #66aaff;
+}
+
+footer a:hover {
+    color: #77bbff;
+}
+
+section.messages {
+    padding: 0;
+    margin: 0;
+}
+
+.message {
+    padding: 0.5rem;
+    margin: 0;
+    border-bottom: 1px solid #888888;
+}
+
+.message-debug {
+    background-color: #aaaaaa;
+}
+
+.nessage-info {
+    background-color: #99ccff;
+}
+
+.message-success {
+    background-color: #ccff99;
+}
+
+.message-warning {
+    background-color: #ffcc99;
+}
+
+.message-error {
+    background-color: #ffaaaa;
+}
+
+table {
+    width: 100%;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th {
+    height: 70px;
+    border: 1px solid;
+}
+
+td {
+    border: 1px solid;
+}
+
+tr:hover {
+    background-color: coral;
+}
