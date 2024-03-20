@@ -33,7 +33,7 @@ Projekto planas:
         * \/ Studio Like Admin
 3) *Views templates static
     1) \/Basic View
-    2) Linking views 
+    2) \/Linking views 
     3) Mark Done
     4) Static CSS
 4) *Translations

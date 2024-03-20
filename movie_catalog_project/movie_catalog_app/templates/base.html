@@ -6,6 +6,13 @@
     <title>{% block title %}Movie Catalog{% endblock title %}</title>
 </head>
 <body>
+    <header>
+        <span class="logo">movieer</span>
+        <ul>
+            <li><a href="{% url 'index' %}">Main page</a></li>
+            <li><a href="{% url 'movie_list' %}">Movies</a></li>
+        </ul>
+    </header>
     <main>{% block content %}{% endblock content %}</main>        
 </body>
 </html>

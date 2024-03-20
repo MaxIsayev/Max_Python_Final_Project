@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}{{ block.super }} list{% endblock title %}
+{% block content %}
+<h1>Movies</h1>
+<div style="overflow-x:auto;">
+    <table>
+    <tr>
+        <th>Name</th>  
+        <th>Owner</th>  
+        <th>Category</th>  
+        <th>Studio</th>  
+        <th>Length</th>  
+        <th>Movie Year</th>  
+        <th>Director</th>  
+        <th>Genre</th>  
+        <th>Link to video</th>  
+        <th>Image</th>            
+    </tr>
+    {% for movie in movie_list %}
+        <tr>
+            <td><a href="{% url "movie_detail" movie.pk %}">{{ movie.name }}</a></td>
+            <td>{{ movie.owner }}</td> 
+            <td>{{ movie.category }}</td>
+            <td>{{ movie.studio }}</td>
+            <td>{{ movie.length }}</td>
+            <td>{{ movie.movie_year }}</td>
+            <td>{{ movie.director }}</td>
+            <td>{{ movie.genre }}</td>
+            <td>                           
+                <videourl><A href="{{ movie.video_file.url }}">Watch {{ movie.name }}</A></videourl>
+            </td>
+            <td>                           
+                <image><A href="{{ movie.video_image.url }}">Image of {{ movie.name }}</A></image>
+            </td>           
+        </tr> 
+        {% empty %}
+        <tr>
+            <td>No movies Found</td>
+        </tr> 
+    {% endfor %}
+    </table>
+</div>
+{% endblock content %}
