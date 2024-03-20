@@ -4,7 +4,9 @@
 <h1>{{ movie.name }}</h1>
 <p>{{ movie.owner }} / {{ movie.category }}</p>
 <p>{{ movie.studio }}</p>
-<p>{{ movie.description }}</p>
+{% if movie.description %}
+    <div class="user-content">{{ movie.description|safe }}</div>
+{% endif %}
 <p>{{ movie.length }}</p>
 <p>{{ movie.movie_year }}</p>
 <p>{{ movie.director }}</p>
@@ -12,6 +14,10 @@
 <video controls >
     <source src="{{ movie.video_file.url }}" type="video/mp4">
 </video>
-<img src="{{ movie.video_image.url }}" alt="Image">     
-<p>{{ movie.youtube_video_hash }}</p>
+<img src="{{ movie.video_image.url }}" alt="Image">  
+{% if movie.youtube_video_hash %}
+    <div class="tube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ movie.youtube_video_hash}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+{% endif %}
 {% endblock content %}

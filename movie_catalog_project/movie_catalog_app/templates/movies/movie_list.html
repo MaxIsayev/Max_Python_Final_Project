@@ -14,7 +14,8 @@
         <th>Director</th>  
         <th>Genre</th>  
         <th>Link to video</th>  
-        <th>Image</th>            
+        <th>Image</th>   
+        <th>YouTube Link</th>          
     </tr>
     {% for movie in movie_list %}
         <tr>
@@ -31,7 +32,12 @@
             </td>
             <td>                           
                 <image><A href="{{ movie.video_image.url }}">Image of {{ movie.name }}</A></image>
-            </td>           
+            </td>   
+            <td>  
+                {% if movie.youtube_video_hash %}                         
+                    <youtube><A href="https://www.youtube.com/embed/{{ movie.youtube_video_hash}}">Watch YouTube {{ movie.name }}</A></youtube>
+                {% endif %}
+            </td>         
         </tr> 
         {% empty %}
         <tr>
