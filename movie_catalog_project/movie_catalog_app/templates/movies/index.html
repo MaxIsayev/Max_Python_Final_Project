@@ -1,8 +1,9 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
-    <h1>Movie Catalog</h1>
-    <p>Users: {{ users_count }}</p>
-    <p>Categories: {{ movie_categorys_count }}</p>
-    <p>Studios: {{ studios_count }}</p>
-    <p>Movies: {{ movies_count }}</p>
+    <h1>{% trans "movie catalog"|capfirst %}</h1>
+    <p>{% trans "users:"|capfirst %} {{ users_count }}</p>
+    <p>{% trans "categories:"|capfirst %} {{ movie_categorys_count }}</p>
+    <p>{% trans "studios:"|capfirst %} {{ studios_count }}</p>
+    <p>{% trans "movies:"|capfirst %} {{ movies_count }}</p>
 {% endblock content %}

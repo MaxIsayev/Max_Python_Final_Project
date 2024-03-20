@@ -1,21 +1,22 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block title %}{{ block.super }} list{% endblock title %}
 {% block content %}
-<h1>Movies</h1>
+<h1>{% trans "movies"|capfirst %}</h1>
 <div style="overflow-x:auto;">
     <table>
     <tr>
-        <th>Name</th>  
-        <th>Owner</th>  
-        <th>Category</th>  
-        <th>Studio</th>  
-        <th>Length</th>  
-        <th>Movie Year</th>  
-        <th>Director</th>  
-        <th>Genre</th>  
-        <th>Link to video file</th>  
-        <th>Link to image</th>   
-        <th>YouTube Link</th>          
+        <th>{% trans "name"|capfirst %}</th>  
+        <th>{% trans "owner"|capfirst %}</th>  
+        <th>{% trans "category"|capfirst %}</th>  
+        <th>{% trans "studio"|capfirst %}</th>  
+        <th>{% trans "length"|capfirst %}</th>  
+        <th>{% trans "movie year"|capfirst %}</th>  
+        <th>{% trans "director"|capfirst %}</th>  
+        <th>{% trans "genre"|capfirst %}</th>  
+        <th>{% trans "link to video file"|capfirst %}</th>  
+        <th>{% trans "link to image"|capfirst %}</th>   
+        <th>{% trans "youTube link"|capfirst %}</th>          
     </tr>
     {% for movie in movie_list %}
         <tr>
@@ -28,20 +29,20 @@
             <td>{{ movie.director }}</td>
             <td>{{ movie.genre }}</td>
             <td>                           
-                <videourl><A href="{{ movie.video_file.url }}">Watch {{ movie.name }}</A></videourl>
+                <videourl><A href="{{ movie.video_file.url }}">{% trans "watch"|capfirst %} {{ movie.name }}</A></videourl>
             </td>
             <td>                           
-                <image><A href="{{ movie.video_image.url }}">Image of {{ movie.name }}</A></image>
+                <image><A href="{{ movie.video_image.url }}">{% trans "image of"|capfirst %} {{ movie.name }}</A></image>
             </td>   
             <td>  
                 {% if movie.youtube_video_hash %}                         
-                    <youtube><A href="https://www.youtube.com/embed/{{ movie.youtube_video_hash}}">Watch YouTube {{ movie.name }}</A></youtube>
+                    <youtube><A href="https://www.youtube.com/embed/{{ movie.youtube_video_hash}}">{% trans "watch YouTube"|capfirst %} {{ movie.name }}</A></youtube>
                 {% endif %}
             </td>         
         </tr> 
         {% empty %}
         <tr>
-            <td>No movies Found</td>
+            <td>{% trans "no movies Found"|capfirst %}</td>
         </tr> 
     {% endfor %}
     </table>

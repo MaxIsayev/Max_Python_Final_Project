@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: movie_catalog_app/templates/movies/movie_list.html:5
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-20 23:57+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < "
+"11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
+"1 : n % 1 != 0 ? 2: 3);\n"
+#: movie_catalog_app/admin.py:21 movie_catalog_app/admin.py:57
+msgid "total movies"
+msgstr "viso filmų"
+
+#: movie_catalog_app/admin.py:25 movie_catalog_app/admin.py:61
+msgid "recent movies"
+msgstr "naujesni filmai"
+
+#: movie_catalog_app/admin.py:38 movie_catalog_app/admin.py:75
+msgid "general"
+msgstr "bendras"
+
+#: movie_catalog_app/admin.py:44 movie_catalog_app/admin.py:81
+msgid "ownership"
+msgstr "nuosavybė"
+
+#: movie_catalog_app/admin.py:49
+msgid "period"
+msgstr "periodas"
+
+#: movie_catalog_app/admin.py:86
+msgid "temporal tracking"
+msgstr "laikinas sekimas"
+
+#: movie_catalog_app/admin.py:91
+msgid "files and links"
+msgstr "failai ir nuorodos"
+
+#: movie_catalog_app/apps.py:10
+msgid "movie_catalog_app"
+msgstr "filmų katalogo aplikacija"
+
+#: movie_catalog_app/models.py:10 movie_catalog_app/models.py:32
+#: movie_catalog_app/models.py:63
+#: movie_catalog_app/templates/movies/movie_list.html:9
+msgid "name"
+msgstr "vardas"
+
+#: movie_catalog_app/models.py:13 movie_catalog_app/models.py:36
+#: movie_catalog_app/models.py:79
+#: movie_catalog_app/templates/movies/movie_list.html:10
+msgid "owner"
+msgstr "savininkas"
+
+#: movie_catalog_app/models.py:20
+msgid "movie category"
+msgstr "filmų kategorija"
+
+#: movie_catalog_app/models.py:21
+msgid "movie categories"
+msgstr "filmų kategorijos"
+
+#: movie_catalog_app/models.py:40
+msgid "city"
+msgstr "miestas"
+
+#: movie_catalog_app/models.py:41
+msgid "country"
+msgstr "šalis"
+
+#: movie_catalog_app/models.py:42
+msgid "year start"
+msgstr "pradiniai metai"
+
+#: movie_catalog_app/models.py:43
+msgid "year end"
+msgstr "pabaigos metai"
+
+#: movie_catalog_app/models.py:44
+msgid "founder"
+msgstr "įsteigėjas"
+
+#: movie_catalog_app/models.py:47 movie_catalog_app/models.py:73
+#: movie_catalog_app/models.py:149
+#: movie_catalog_app/templates/movies/movie_list.html:12
+msgid "studio"
+msgstr "studija"
+
+#: movie_catalog_app/models.py:48
+msgid "studios"
+msgstr "studijos"
+
+#: movie_catalog_app/models.py:67
+#: movie_catalog_app/templates/movies/movie_list.html:11
+msgid "category"
+msgstr "kategorija"
+
+#: movie_catalog_app/models.py:83
+#: movie_catalog_app/templates/movies/movie_list.html:13
+msgid "length"
+msgstr "trukmė"
+
+#: movie_catalog_app/models.py:84
+#: movie_catalog_app/templates/movies/movie_list.html:14
+msgid "movie year"
+msgstr "filmo metai"
+
+#: movie_catalog_app/models.py:85
+#: movie_catalog_app/templates/movies/movie_list.html:16
+msgid "genre"
+msgstr "žanras"
+
+#: movie_catalog_app/models.py:86
+#: movie_catalog_app/templates/movies/movie_list.html:15
+msgid "director"
+msgstr "režisierius"
+
+#: movie_catalog_app/models.py:87
+msgid "video file"
+msgstr "video failas"
+
+#: movie_catalog_app/models.py:88
+msgid "video picture"
+msgstr "video paveikslas"
+
+#: movie_catalog_app/models.py:90
+msgid "YouTube video hash"
+msgstr "YouTube video hashas"
+
+#: movie_catalog_app/models.py:93
+msgid ""
+"from Youtube's video URL copy the part after 'https://www.youtube.com/watch?"
+"v='."
+msgstr ""
+"Iš Youtube's video nuorodos nukopijuokite dalį po 'https://www.youtube.com/watch?"
+"v='."
+
+#: movie_catalog_app/models.py:100 movie_catalog_app/models.py:124
+msgid "movie"
+msgstr "filmas"
+
+#: movie_catalog_app/models.py:101 movie_catalog_app/templates/base.html:13
+#: movie_catalog_app/templates/base.html:16
+msgid "movies"
+msgstr "filmai"
+
+#: movie_catalog_app/models.py:130 movie_catalog_app/models.py:155
+msgid "user"
+msgstr "vartotojas"
+
+#: movie_catalog_app/models.py:134 movie_catalog_app/models.py:159
+msgid "type"
+msgstr "tipas"
+
+#: movie_catalog_app/models.py:137
+msgid "movie like"
+msgstr "filmo patiktukas"
+
+#: movie_catalog_app/models.py:138
+msgid "movie likes"
+msgstr "filmo patiktukai"
+
+#: movie_catalog_app/models.py:162
+msgid "studio like"
+msgstr "studijos patiktukas"
+
+#: movie_catalog_app/models.py:163
+msgid "studio likes"
+msgstr "studijos patiktukai"
+
+#: movie_catalog_app/templates/base.html:8
+#: movie_catalog_app/templates/movies/index.html:4
+msgid "movie catalog"
+msgstr "filmo katalogas"
+
+#: movie_catalog_app/templates/base.html:15
+msgid "main page"
+msgstr "Pagrindinis"
+
+#: movie_catalog_app/templates/base.html:41
+msgid "community on discord"
+msgstr "discordo bendruomenė"
+
+#: movie_catalog_app/templates/movies/index.html:5
+msgid "users:"
+msgstr "vartotojai:"
+
+#: movie_catalog_app/templates/movies/index.html:6
+msgid "categories:"
+msgstr "kategorijos:"
+
+#: movie_catalog_app/templates/movies/index.html:7
+msgid "studios:"
+msgstr "studijos:"
+
+#: movie_catalog_app/templates/movies/index.html:8
+msgid "movies:"
+msgstr "filmai:"
+
+#: movie_catalog_app/templates/movies/movie_list.html:17
+msgid "link to video file"
+msgstr "video failo nuoroda"
+
+#: movie_catalog_app/templates/movies/movie_list.html:18
+msgid "link to image"
+msgstr "paveikslo nuoroda"
+
+#: movie_catalog_app/templates/movies/movie_list.html:19
+msgid "youTube link"
+msgstr "nuoroda į YouTube"
+
+#: movie_catalog_app/templates/movies/movie_list.html:32
+msgid "watch"
+msgstr "žiūrėti"
+
+#: movie_catalog_app/templates/movies/movie_list.html:35
+msgid "image of"
+msgstr "paveikslas nuo"
+
+#: movie_catalog_app/templates/movies/movie_list.html:39
+msgid "watch YouTube"
+msgstr "žiūrėti Youtube"
+
+#: movie_catalog_app/templates/movies/movie_list.html:45
+msgid "no movies Found"
+msgstr "filmų nerasta"

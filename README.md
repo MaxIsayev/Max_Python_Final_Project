@@ -31,11 +31,11 @@ Projekto planas:
         * \/ Movie Admin
         * \/ Movie Like Admin
         * \/ Studio Like Admin
-3) *Views templates static
+3) \/ Views templates static
     1) \/ Basic View
     2) \/ Linking views 
     3) \/ Mark Done
-    4) Static CSS
+    4) \/ Static CSS
 4) *Translations
     1) Translating code
     2) Multilingual Config
@@ -45,7 +45,7 @@ Projekto planas:
 8) *Tiny MCE 
 9) Kiti: 
     * profile picture 
-    * *youtube link
+    * \/youtube link
     * *likes 
     * \/Facebook icon
     * paginator

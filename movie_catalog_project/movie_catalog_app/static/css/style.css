@@ -156,3 +156,11 @@ td {
 tr:hover {
     background-color: coral;
 }
+
+.spacer {
+    flex-grow: 1;
+}
+header form select {
+    margin: 1rem;
+    font-size: 100%;
+}

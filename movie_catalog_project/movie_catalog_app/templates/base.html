@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-{% load static %}    
+{% load static i18n %}   
+{% get_current_language as LANGUAGE_CODE %}{% get_available_languages as LANGUAGES %}
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Movie Catalog{% endblock title %}</title>
+    <title>{% block title %}{% trans "movie catalog"|capfirst %}{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <header>
-        <span class="logo">Movies</span>
+        <span class="logo">{% trans "movies"|capfirst %}</span>
         <ul class="nav">
-            <li><a href="{% url 'index' %}">Main page</a></li>
-            <li><a href="{% url 'movie_list' %}">Movies</a></li>
+            <li><a href="{% url 'index' %}">{% trans "main page"|capfirst %}</a></li>
+            <li><a href="{% url 'movie_list' %}">{% trans "movies"|capfirst %}</a></li>
         </ul>
+        <span class="spacer"></span>
+        <form action="{% url "set_language" %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ redirect_to }}">
+            <select class="language" name="language" onchange="this.form.submit();">
+                {% for language in LANGUAGES %}
+                    <option value="{{ language.0 }}" {% if language.0 == LANGUAGE_CODE %}selected{% endif %}>
+                        {{ language.1 }}
+                    </option>
+                {% endfor %}
+            </select>
+        </form>
     </header>
     <section class="messages">
         {% for message in messages %}
@@ -25,7 +38,7 @@
         {% block footer %}{% endblock footer %}       
         <p>&copy; 2024 PTU20 
             <a href="https://github.com/MaxIsayev" target="_blank">Max Isayev</a>
-            <a style="float:right;" href="https://discord.gg/ywbbZPcY">community on discord</a>
+            <a style="float:right;" href="https://discord.gg/ywbbZPcY">{% trans "community on discord"|capfirst %}</a>
             <a style="float:right;" href="https://facebook.com/" target="_blank"><img class="icon" width="40" height="40" src="{% static "img/fbicon.png" %}"></a>
         </p>
     </footer>   
