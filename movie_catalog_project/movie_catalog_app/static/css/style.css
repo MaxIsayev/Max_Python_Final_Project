@@ -22,6 +22,24 @@ main {
     flex-grow: 1;
 }
 
+main form label {
+    display: inline-block;
+    min-width: 20vw;
+    font-size: 120%;
+}
+
+main form input, 
+main form textarea, 
+main form select,
+main form button {
+    font-size: 120%;
+}
+
+main form .helptext {
+    display: block;
+    font-size: 90%;
+}
+
 footer {
     background-color: #666666;
 }
@@ -112,7 +130,7 @@ section.messages {
     margin: 0;
 }
 
-.message {
+.message, ul.errorlist {
     padding: 0.5rem;
     margin: 0;
     border-bottom: 1px solid #888888;
@@ -134,7 +152,7 @@ section.messages {
     background-color: #ffcc99;
 }
 
-.message-error {
+.message-error, ul.errorlist {
     background-color: #ffaaaa;
 }
 
@@ -157,6 +175,10 @@ tr:hover {
     background-color: coral;
 }
 
+td:hover {
+    background-color: yellow;
+}
+
 .spacer {
     flex-grow: 1;
 }
@@ -164,3 +186,4 @@ header form select {
     margin: 1rem;
     font-size: 100%;
 }
+

@@ -3,13 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: movie_catalog_app/templates/movies/movie_list.html:5
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-20 23:57+0200\n"
+"POT-Creation-Date: 2024-03-21 11:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < "
 "11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
 "1 : n % 1 != 0 ? 2: 3);\n"
+
 #: movie_catalog_app/admin.py:21 movie_catalog_app/admin.py:57
 msgid "total movies"
 msgstr "viso filmų"
@@ -49,7 +49,9 @@ msgid "files and links"
 msgstr "failai ir nuorodos"
 
 #: movie_catalog_app/apps.py:10
-msgid "movie_catalog_app"
+#, fuzzy
+#| msgid "movie_catalog_app"
+msgid "movie catalog app"
 msgstr "filmų katalogo aplikacija"
 
 #: movie_catalog_app/models.py:10 movie_catalog_app/models.py:32
@@ -144,8 +146,8 @@ msgid ""
 "from Youtube's video URL copy the part after 'https://www.youtube.com/watch?"
 "v='."
 msgstr ""
-"Iš Youtube's video nuorodos nukopijuokite dalį po 'https://www.youtube.com/watch?"
-"v='."
+"Iš Youtube's video nuorodos nukopijuokite dalį po 'https://www.youtube.com/"
+"watch?v='."
 
 #: movie_catalog_app/models.py:100 movie_catalog_app/models.py:124
 msgid "movie"
@@ -153,6 +155,7 @@ msgstr "filmas"
 
 #: movie_catalog_app/models.py:101 movie_catalog_app/templates/base.html:13
 #: movie_catalog_app/templates/base.html:16
+#: movie_catalog_app/templates/movies/movie_list.html:5
 msgid "movies"
 msgstr "filmai"
 
@@ -189,7 +192,23 @@ msgstr "filmo katalogas"
 msgid "main page"
 msgstr "Pagrindinis"
 
-#: movie_catalog_app/templates/base.html:41
+#: movie_catalog_app/templates/base.html:23
+msgid "admin"
+msgstr "administratorius"
+
+#: movie_catalog_app/templates/base.html:25
+msgid "log out"
+msgstr "išeiti"
+
+#: movie_catalog_app/templates/base.html:27
+msgid "log in"
+msgstr "prisijungti"
+
+#: movie_catalog_app/templates/base.html:28
+msgid "sign up"
+msgstr "užsiregistruoti"
+
+#: movie_catalog_app/templates/base.html:53
 msgid "community on discord"
 msgstr "discordo bendruomenė"
 

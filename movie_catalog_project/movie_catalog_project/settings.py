@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'user_profile', 
     'movie_catalog_app',
     'tinymce',
     'django.contrib.admin',
@@ -150,6 +151,8 @@ TINYMCE_DEFAULT_CONFIG = {
                "ltr rtl | showcomments addcomment code",
     "custom_undo_redo_levels": 10,
 }
+
+LOGIN_REDIRECT_URL = '/'
 
 try:
     from .local_settings import *

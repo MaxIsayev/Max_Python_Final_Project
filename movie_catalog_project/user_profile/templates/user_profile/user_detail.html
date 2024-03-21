@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{{ object }} {% trans "at" %} {{ block.super }}{% endblock title %}
+{% block content %}
+<h1>{% trans "user"|title %} {{ object.username }}</h1>
+<p>{{ object.first_name }} {{ object.last_name }}</p>
+{% if object == request.user %}
+    <p><a class="button" href="{% url "user_update" %}">{% trans "edit profile data" %}</a></p>
+    <p>{% trans "e-mail"|capfirst %}: {{ object.email }}</p>    
+    <img src="{{ profile.picture.url }}" alt="Image">    
+{% endif %}
+{% endblock content %}

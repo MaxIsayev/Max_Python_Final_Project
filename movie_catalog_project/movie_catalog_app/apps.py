@@ -7,4 +7,4 @@ class MovieCatalogAppConfig(AppConfig):
     name = 'movie_catalog_app'
 
     class Meta:
-        verbose_name = _('movie_catalog_app')
+        verbose_name = _('movie catalog app')
