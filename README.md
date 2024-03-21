@@ -36,16 +36,21 @@ Projekto planas:
     2) \/ Linking views 
     3) \/ Mark Done
     4) \/ Static CSS
-4) \/Translations
+4) \/ Translations
     1) \/Translating code
     2) \/Multilingual Config
-5) User Profile
+5) \/ User Profile
 6) Generic Views
 7) Function views more
 8) *Tiny MCE 
 9) Kiti: 
-    * profile picture 
+    * \/profile picture 
     * \/youtube link
     * *likes 
     * \/Facebook icon
     * paginator
+
+Projekto papildomas planas:
+
+10) Docker
+11) client support
