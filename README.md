@@ -57,7 +57,7 @@ Projekto planas:
 9) Kiti: 
     * \/profile picture 
     * \/youtube link
-    * *likes 
+    * \/likes 
     * \/Facebook icon     
 
 Projekto papildomas planas:
