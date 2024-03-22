@@ -40,10 +40,10 @@ Projekto planas:
     1) \/Translating code
     2) \/Multilingual Config
 5) \/ User Profile
-6) \/Generic Views
+6) \/ Generic Views
     1) \/ Class based views
     2) \/ Update and delete
-7) Function views more
+7) \/ Function views more
     1) \/ functional movie views (done basic)
     2) \/ edit delete (done basic)
     3) \/ index 
