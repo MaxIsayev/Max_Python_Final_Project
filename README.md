@@ -44,6 +44,9 @@ Projekto planas:
     1) \/ Class based views
     2) \/ Update and delete
 7) Function views more
+    1) *functional movie views
+    2)
+    3)
 8) *Tiny MCE 
 9) Kiti: 
     * \/profile picture 

@@ -3,6 +3,25 @@
 {% block title %}{{ block.super }} list{% endblock title %}
 {% block content %}
 <h1>{% trans "movies"|capfirst %}</h1>
+<div class="toolbar">
+    <a class="button" href="{% url "movie_category_create" %}">{% trans "create new"|title %}</a>
+    <form method="get" action="{{ request.path }}">
+        <select name="owner" onchange="this.form.submit();">
+            <option value="">{% trans "filter by owner"|capfirst %}</option>
+            {% for user in user_list %}
+                <option value="{{ user.username }}" {% if user.username == request.GET.owner %}selected{% endif %}>{{ user.first_name }} {{ user.last_name }} ({{ user.username }})</option>
+            {% endfor %}
+        </select>
+        <select name="movie_category_pk" onchange="this.form.submit();">
+            <option value="">{% trans "filter by movie category"|capfirst %}</option>
+            {% for movie_category in movie_category_list %}
+                <option value="{{ movie_category.pk }}" {% if movie_category.pk|slugify == request.GET.movie_category_pk %}selected{% endif %}>{{ movie_category.name }}</option>
+            {% endfor %}
+        </select>
+        <input type="text" name="search_name" value="{{ request.GET.search_name }}" placeholder="{% trans 'search by name' %}...">
+        <button type="submit">&#128269;</button>
+    </form>
+</div>
 <div style="overflow-x:auto;">
     <table>
     <tr>

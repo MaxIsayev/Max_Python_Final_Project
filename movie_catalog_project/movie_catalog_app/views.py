@@ -14,7 +14,7 @@ from django.contrib.auth.decorators import login_required
 
 def index(request: HttpRequest) -> HttpResponse:
     context = {
-        'movie_categorys_count': models.MovieCategory.objects.count(),
+        'movie_categories_count': models.MovieCategory.objects.count(),
         'movies_count': models.Movie.objects.count(),
         'studios_count': models.Studio.objects.count(),
         'users_count': models.get_user_model().objects.count(),
@@ -22,9 +22,29 @@ def index(request: HttpRequest) -> HttpResponse:
     return render(request, 'movies/index.html', context)
 
 def movie_list(request: HttpRequest) -> HttpResponse:
-    return render(request, 'movies/movie_list.html', {
-        'movie_list': models.Movie.objects.all(),
-    })
+    queryset = models.Movie.objects
+    owner_username = request.GET.get('owner')
+    if owner_username:
+        owner = get_object_or_404(get_user_model(), username=owner_username)
+        queryset = queryset.filter(owner=owner)
+        movie_categories = models.MovieCategory.objects.filter(owner=owner)
+    elif request.user.is_authenticated:
+        movie_categories = models.MovieCategory.objects.filter(owner=request.user)
+    else:
+        movie_categories = models.MovieCategory.objects
+    movie_category_pk = request.GET.get('movie_category_pk')
+    if movie_category_pk:
+        movie_category = get_object_or_404(models.MovieCategory, pk=movie_category_pk)
+        queryset = queryset.filter(category=movie_category)
+    search_name = request.GET.get('search_name')
+    if search_name:
+        queryset = queryset.filter(name__icontains=search_name)
+    context = {
+        'movie_list': queryset.all(),
+        'movie_category_list': movie_categories.all(),
+        'user_list': get_user_model().objects.all().order_by('username'),
+    }
+    return render(request, 'movies/movie_list.html', context)
 
 def movie_detail(request: HttpRequest, pk:int) -> HttpResponse:
     return render(request, 'movies/movie_detail.html', {
@@ -90,4 +110,4 @@ def movie_category_delete(request: HttpRequest, pk: int) -> HttpResponse:
         messages.success(request, _("movie category deleted successfully"))
         return redirect('movie_category_list')
     return render(request, 'movies/movie_category_delete.html', {'movie_category': movie_category, 'object': movie_category})
-        
+
