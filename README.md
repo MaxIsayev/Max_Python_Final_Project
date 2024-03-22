@@ -51,6 +51,8 @@ Projekto planas:
         * Create
         * Update
         * Delete
+        * List
+        * Detail
 8) \/Tiny MCE 
 9) Kiti: 
     * \/profile picture 

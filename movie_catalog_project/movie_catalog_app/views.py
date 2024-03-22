@@ -84,7 +84,8 @@ def movie_list(request: HttpRequest) -> HttpResponse:
 
 def movie_detail(request: HttpRequest, pk:int) -> HttpResponse:
     return render(request, 'movies/movie_detail.html', {
-        'movie': get_object_or_404(models.Movie, pk=pk)
+        'movie': get_object_or_404(models.Movie, pk=pk),
+        'like_types': models.LIKE_TYPE_CHOICES,
     })
 
 class MovieCategoryListView(generic.ListView):
@@ -105,8 +106,7 @@ class MovieCategoryListView(generic.ListView):
 
 def movie_category_detail(request: HttpRequest, pk:int) -> HttpResponse:
     return render(request, 'movies/movie_category_detail.html', {
-        'movie_category_detail': get_object_or_404(models.MovieCategory, pk=pk)
-
+        'movie_category_detail': get_object_or_404(models.MovieCategory, pk=pk),        
     })
 
 class MovieCategoryCreateView(LoginRequiredMixin, generic.CreateView):
@@ -186,3 +186,16 @@ def movie_delete(request: HttpRequest, pk: int) -> HttpResponse:
         messages.success(request, _("movie deleted successfully"))
         return redirect('movie_list')
     return render(request, 'movies/movie_delete.html', {'movie': movie, 'object': movie})
+
+@login_required
+def movie_like(request: HttpRequest, pk: int) -> HttpResponse:
+    movie = get_object_or_404(models.Movie, pk=pk)
+    like_type = request.GET.get('like_type') or 3
+    like = models.MovieLike.objects.filter(movie=movie, user=request.user, like_type=like_type).first()
+    if not like:
+         models.MovieLike.objects.create(movie=movie, user=request.user, like_type=like_type)
+    else:
+        like.delete()
+    if request.GET.get('next'):
+        return redirect(request.GET.get('next'))
+    return redirect('movie_list')

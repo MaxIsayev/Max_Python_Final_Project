@@ -3,6 +3,24 @@
 {% block title %}{{ block.super }} | {{ movie }}{% endblock title %}
 {% block content %}
 <h1>{{ movie.name }}</h1>
+<div class="toolbar">
+    {% if request.user.is_authenticated %}
+    <form action="{% url "movie_like" movie.pk %}" method="get">
+        <input type="hidden" name="next" value="{{ request.path }}">
+        <select class="like-type" name="like_type" onchange="this.form.submit();">
+            <option value="">{% trans "like" %}</option>
+            {% for like_type in like_types %}
+                <option value="{{ like_type.0 }}">{{ like_type.1|safe }}</option>
+            {% endfor %}
+        </select>
+    </form>
+    {% endif %}
+    {% for like in movie.likes_by_type %}
+        {% for like_type in like_types %}
+            {% if like_type.0 == like.like_type%}{{ like_type.1|safe }}: {{ like.count }}{% endif %}
+        {% endfor %}
+    {% endfor %}
+</div>
 {% if movie.owner == request.user %}
     <p>
         <a class="button" href="{% url "movie_update" movie.pk %}">{% trans "edit"|capfirst %}</a>

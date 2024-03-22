@@ -14,6 +14,7 @@ urlpatterns = [
     path('movies/create/', views.movie_create, name='movie_create'),
     path('movie/<int:pk>/edit/', views.movie_update, name='movie_update'),
     path('movie/<int:pk>/delete/', views.movie_delete, name='movie_delete'),
+    path('movie/<int:pk>/like/', views.movie_like, name='movie_like'),
 ]
 
 

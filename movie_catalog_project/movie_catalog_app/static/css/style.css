@@ -250,3 +250,8 @@ ul.catalog li .stat {
     overflow: auto;
     max-width: max-content;
 }
+.toolbar form select.like-type {
+    margin: 0; padding: 0;
+    background-color: transparent;
+    border: none;
+}
