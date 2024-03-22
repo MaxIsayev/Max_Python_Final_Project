@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% trans "movie catalog"|capfirst %}{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% if request.user.is_authenticated and form %}
+        <script src="{% static 'tinymce/tinymce.min.js' %}"></script>
+        {{ form.media }}
+    {% endif %}
 </head>
 <body>
     <header>

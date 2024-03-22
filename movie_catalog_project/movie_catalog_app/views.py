@@ -112,7 +112,7 @@ def movie_category_detail(request: HttpRequest, pk:int) -> HttpResponse:
 class MovieCategoryCreateView(LoginRequiredMixin, generic.CreateView):
     model = models.MovieCategory
     template_name = 'movies/movie_category_create.html'
-    fields = ('name', )
+    fields = ('name', 'description', )
 
     def get_success_url(self) -> str:
         messages.success(self.request, _('movie category created successfully').capitalize())
@@ -129,7 +129,7 @@ class MovieCategoryUpdateView(
     ):
     model = models.MovieCategory
     template_name = 'movies/movie_category_update.html'
-    fields = ('name', )
+    fields = ('name', 'description', )
 
     def get_success_url(self) -> str:
         messages.success(self.request, _('movie category updated successfully').capitalize())

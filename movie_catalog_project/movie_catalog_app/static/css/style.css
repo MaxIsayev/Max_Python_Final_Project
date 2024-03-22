@@ -241,4 +241,12 @@ ul.catalog li .stat {
     background-color: #ffffff9f;
     border-radius: 5rem;
     min-width: 7rem;
-} 
+}
+.user-content {
+    background-color: #ffffff7f;
+    border: 2px solid #999999;
+    border-radius: 1rem;
+    margin: 1rem;
+    overflow: auto;
+    max-width: max-content;
+}

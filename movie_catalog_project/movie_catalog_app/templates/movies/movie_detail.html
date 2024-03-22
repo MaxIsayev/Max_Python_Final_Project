@@ -11,9 +11,7 @@
 {% endif %}
 <p>{{ movie.owner }} / {{ movie.category }}</p>
 <p>{{ movie.studio }}</p>
-{% if movie.description %}
-    <div class="user-content">{{ movie.description|safe }}</div>
-{% endif %}
+<p>{{ movie.description|safe }}</p>
 <p>{{ movie.length }}</p>
 <p>{{ movie.movie_year }}</p>
 <p>{{ movie.director }}</p>
