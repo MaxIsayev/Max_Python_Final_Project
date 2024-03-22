@@ -1,9 +1,29 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block content %}
-    <h1>{% trans "movie catalog"|capfirst %}</h1>
-    <p>{% trans "users:"|capfirst %} {{ users_count }}</p>
-    <p>{% trans "categories:"|capfirst %} {{ movie_categories_count }}</p>
-    <p>{% trans "studios:"|capfirst %} {{ studios_count }}</p>
-    <p>{% trans "movies:"|capfirst %} {{ movies_count }}</p>
+<h2>{% trans "common catalog"|title %}</h2>
+<ul class="catalog">
+    {% for metric in common_catalog %}
+    <li>{% if metric.2 %}<a href="{{ metric.2}}">{% endif %}
+        <h3>{{ metric.0 }}</h3>
+        <span class="stat">{{ metric.1 }}</span>
+    {% if metric.2 %}</a>{% endif %}</li>
+    {% endfor %}
+    </ul>
+        <h2>{% trans "user catalog"|title %}</h2>
+        <ul class="catalog">
+        {% for metric in user_catalog %}
+        <li>{% if metric.2 %}<a href="{{ metric.2}}">{% endif %}
+            <h3>{{ metric.0 }}</h3>
+            <span class="stat">{{ metric.1 }}</span>
+            {% if metric.2 %}</a>{% endif %}</li>
+        {% empty %}
+        <li>
+            <h3>{% trans "login required" %}</h3>
+            <span class="stat">{% trans "nothing here" %}</span>
+        </li>
+        {% endfor %}
+    </ul>   
+<ul>
+</ul>
 {% endblock content %}

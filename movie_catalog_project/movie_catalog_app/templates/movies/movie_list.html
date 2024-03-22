@@ -4,7 +4,8 @@
 {% block content %}
 <h1>{% trans "movies"|capfirst %}</h1>
 <div class="toolbar">
-    <a class="button" href="{% url "movie_category_create" %}">{% trans "create new"|title %}</a>
+    <a class="button" href="{% url "movie_create" %}">{% trans "create new movie"|title %}</a>
+    <a class="button" href="{% url "movie_category_create" %}">{% trans "create new category"|title %}</a>
     <form method="get" action="{{ request.path }}">
         <select name="owner" onchange="this.form.submit();">
             <option value="">{% trans "filter by owner"|capfirst %}</option>
@@ -47,11 +48,15 @@
             <td>{{ movie.movie_year }}</td>
             <td>{{ movie.director }}</td>
             <td>{{ movie.genre }}</td>
-            <td>                           
-                <videourl><A href="{{ movie.video_file.url }}">{% trans "watch"|capfirst %} {{ movie.name }}</A></videourl>
+            <td>
+                {% if movie.video_file != "" %}                              
+                    <videourl><A href="{{ movie.video_file.url }}">{% trans "watch"|capfirst %} {{ movie.name }}</A></videourl>
+                {% endif %}    
             </td>
-            <td>                           
-                <image><A href="{{ movie.video_image.url }}">{% trans "image of"|capfirst %} {{ movie.name }}</A></image>
+            <td> 
+                {% if movie.video_image != "" %}                               
+                    <image><A href="{{ movie.video_image.url }}">{% trans "image of"|capfirst %} {{ movie.name }}</A></image>
+                {% endif %}  
             </td>   
             <td>  
                 {% if movie.youtube_video_hash %}                         

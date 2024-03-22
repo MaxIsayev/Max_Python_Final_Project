@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% trans "deleting"|capfirst %} {{ movie.name }} | {{ block.super }}{% endblock title %}
+{% block content %}
+<h1>{% trans "deleting movie"|capfirst %} {{ movie.name }}</h1>
+<form method="post" action="{{ request.path }}?next={{ request.GET.next|urlencode }}">
+    {% csrf_token %}
+    <p>
+        {% trans "are you sure you want to delete movie" %}
+        {{ movie.name }}? 
+    </p>
+    <p>
+        <button type="submit">{% trans "confirm"|capfirst %}</button>
+        <a class="button" href="{% url "movie_detail" movie.pk %}?next={{ request.GET.next|urlencode }}">{% trans "change mind"|capfirst %}</a>
+    </p>
+</form>
+{% endblock content %}

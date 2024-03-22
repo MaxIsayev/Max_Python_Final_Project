@@ -213,4 +213,32 @@ button:hover, .button:hover {
     padding: 0.4rem;
 }
 
- 
+ul.catalog {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+ul.catalog li {
+    display: inline-block;
+    border: 2px solid #999999;
+    border-radius: 1rem;
+}
+
+ul.catalog li h3 {
+    border-radius: 1rem;
+    text-align: center;
+}
+
+ul.catalog li .stat {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: #ffffff9f;
+    border-radius: 5rem;
+    min-width: 7rem;
+} 

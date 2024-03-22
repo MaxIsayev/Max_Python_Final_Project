@@ -44,9 +44,9 @@ Projekto planas:
     1) \/ Class based views
     2) \/ Update and delete
 7) Function views more
-    1) *functional movie views
-    2)
-    3)
+    1) \/ functional movie views (done basic)
+    2) \/ edit delete (done basic)
+    3) \/ index 
 8) *Tiny MCE 
 9) Kiti: 
     * \/profile picture 
@@ -64,3 +64,11 @@ Problemos:
 
 * nesiverčia profilyje žodis "Picture"
 * ne visi class based views veikia, tenka naudoti functional views
+* neveikia kodas 
+
+form.fields['project'].queryset = form.fields['project'].queryset.filter(owner=request.user) 
+
+Todėl jo tenka nenaudoti arba naudoti class based view
+
+* Video ir paveikslas neikeliami movie_create ir movie_update
+ 

@@ -11,6 +11,9 @@ urlpatterns = [
     path('movie_category/<int:pk>/edit/', views.MovieCategoryUpdateView.as_view(), name='movie_category_update'),
     path('movie_category/<int:pk>/delete/', views.movie_category_delete, name='movie_category_delete'),
     path('user_profile/', include('user_profile.urls')),
+    path('movies/create/', views.movie_create, name='movie_create'),
+    path('movie/<int:pk>/edit/', views.movie_update, name='movie_update'),
+    path('movie/<int:pk>/delete/', views.movie_delete, name='movie_delete'),
 ]
 
 
