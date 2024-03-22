@@ -2,9 +2,9 @@
 {% block title %}{% trans "editing"|capfirst %} {{ form.name.value }} {{ block.super }}{% endblock title %}
 {% block content %}
 <h1>{% trans "editing movie"|capfirst %} {{ form.name.value }}</h1>
-<form method="post" action="{{ request.path }}?next={{ request.GET.next|urlencode }}">
+<form action={{ request.path }} method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form.as_p }}       
     <p><button type="submit">{% trans "confirm"|capfirst %}</button></p>
 </form>
 {% endblock content %}

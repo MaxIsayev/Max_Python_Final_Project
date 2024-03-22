@@ -17,7 +17,7 @@ Projekto planas:
 1) \/ New project and app:
     1) \/ Projekto sukūrimas, konfiguracija
     2) \/ Aplikacijos sukūrimas
-2) Model and admin
+2) \/ Model and admin
     1) \/ Data modeling
         * \/ MovieCategory
         * \/ Studio
@@ -54,7 +54,7 @@ Projekto planas:
         * List
         * Detail
 8) \/Tiny MCE 
-9) Kiti: 
+9) \/Kiti: 
     * \/profile picture 
     * \/youtube link
     * \/likes 
@@ -75,6 +75,4 @@ Problemos:
 form.fields['project'].queryset = form.fields['project'].queryset.filter(owner=request.user) 
 
 Todėl jo tenka nenaudoti arba naudoti class based view
-
-* Video ir paveikslas neikeliami movie_create ir movie_update
  

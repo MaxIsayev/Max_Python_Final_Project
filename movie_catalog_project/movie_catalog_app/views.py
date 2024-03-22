@@ -150,7 +150,7 @@ def movie_category_delete(request: HttpRequest, pk: int) -> HttpResponse:
 @login_required
 def movie_create(request: HttpRequest) -> HttpResponse:
     if request.method == "POST":
-        form = forms.MovieForm(request.POST)
+        form = forms.MovieForm(request.POST, request.FILES)
         print("POST processing")
         if form.is_valid():
             print("form valid")
@@ -168,14 +168,14 @@ def movie_create(request: HttpRequest) -> HttpResponse:
 def movie_update(request: HttpRequest, pk: int) -> HttpResponse:
     movie = get_object_or_404(models.Movie, pk=pk, owner=request.user)
     if request.method == "POST":
-        form = forms.MovieForm(request.POST, instance=movie)
+        form = forms.MovieForm(request.POST, request.FILES, instance=movie)
         if form.is_valid():
             form.save()
             messages.success(request, _("movie edited successfully"))
             return redirect('movie_detail', pk=pk)
     else:
         form = forms.MovieForm(instance=movie)
-    #form.fields['category'].queryset = form.fields['category'].queryset.filter(owner=request.user)
+    form.fields['category'].queryset = form.fields['category'].queryset.filter(owner=request.user)
     return render(request, 'movies/movie_update.html', {'form': form})
 
 @login_required

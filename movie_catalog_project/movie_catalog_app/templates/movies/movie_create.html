@@ -2,7 +2,7 @@
 {% block title %}{% trans "create a movie at"|capfirst %} {{ block.super }}{% endblock title %}
 {% block content %}
 <h1>{% trans "create a movie"|capfirst %}</h1>
-<form method="POST" action="{{ request.path }}?next={{ request.GET.next|urlencode }}">
+<form method="POST" action="{{ request.path }}?next={{ request.GET.next|urlencode }}" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <p><button type="submit">{% trans "create"|capfirst %}</button></p>
