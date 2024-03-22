@@ -47,18 +47,22 @@ Projekto planas:
     1) \/ functional movie views (done basic)
     2) \/ edit delete (done basic)
     3) \/ index 
-8) *Tiny MCE 
+    4) Studio
+        * Create
+        * Update
+        * Delete
+8) \/Tiny MCE 
 9) Kiti: 
     * \/profile picture 
     * \/youtube link
     * *likes 
-    * \/Facebook icon
-    * paginator
+    * \/Facebook icon     
 
 Projekto papildomas planas:
 
 10) Docker
 11) client support
+12) paginator
 
 Problemos:
 
