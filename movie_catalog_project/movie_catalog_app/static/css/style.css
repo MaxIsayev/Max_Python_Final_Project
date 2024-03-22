@@ -187,3 +187,29 @@ header form select {
     font-size: 100%;
 }
 
+button, .button {
+    background-color: #d8d8d8;
+    border: 1px solid #666666;
+    border-bottom: 2px solid #004488;
+    padding: 0.5rem;
+    font-size: 120%;
+    cursor: pointer;
+}
+
+button:hover, .button:hover {
+    background-color: #dfdfdf;
+    border-bottom: 2px solid #0055cc;
+}
+
+.toolbar {
+    margin: 0.5rem;
+}
+
+.toolbar form {
+    display: inline;
+}
+
+.toolbar form select {
+    padding: 0.4rem;
+}
+ 

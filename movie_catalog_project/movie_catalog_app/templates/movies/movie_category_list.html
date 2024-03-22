@@ -1,0 +1,27 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{{ block.super }} {% trans "movie categories" %}{% endblock title %}
+{% block content %}
+<h1>{% trans "movie categories"|capfirst %}</h1>
+<div class="toolbar">
+    <a class="button" href="{% url "movie_category_create" %}">{% trans "create new"|capfirst %}</a>
+    <form method="get" action="{{ request.path }}">
+        <select name="owner" onchange="this.form.submit();">
+            <option value="">{% trans "filter by owner"|capfirst %}</option>
+            {% for user in user_list  %}
+                <option value="{{ user.username }}" {% if user.username == request.GET.owner %}selected{% endif %}>
+                    {{ user.first_name }} {{ user.last_name }}
+                    ({{ user.username }})
+                </option>
+            {% endfor %}
+        </select>
+    </form>
+</div>
+<ul> 
+{% for movie_category in movie_category_list %}
+    <li>
+        <a href="{% url "movie_category_detail" movie_category.pk %}">{{ movie_category.name }}</a>
+        ({{ movie_category.movies.count }})
+    </li>
+{% endfor %}
+</ul>
+{% endblock content %}

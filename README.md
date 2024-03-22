@@ -41,6 +41,8 @@ Projekto planas:
     2) \/Multilingual Config
 5) \/ User Profile
 6) Generic Views
+    1) \/ Class based views
+    2) *Update and delete
 7) Function views more
 8) *Tiny MCE 
 9) Kiti: 
@@ -54,3 +56,8 @@ Projekto papildomas planas:
 
 10) Docker
 11) client support
+
+Problemos:
+
+* nesiverčia profilyje žodis "Picture"
+* ne visi class based views veikia, tenka naudoti functional views

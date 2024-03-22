@@ -1,0 +1,10 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% trans "editing"|capfirst %} {{ movie_category.name }} | {{ block.super }}{% endblock title %}
+{% block content %}
+<h1>{% trans "editing movie category"|capfirst %} {{ movie_category.name }}</h1>
+<form method="post" action="{{ request.path }}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p><button type="submit">{% trans "confirm"|capfirst %}</button></p>
+</form>
+{% endblock content %}

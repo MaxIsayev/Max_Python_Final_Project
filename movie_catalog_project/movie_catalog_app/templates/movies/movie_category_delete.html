@@ -1,0 +1,19 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% trans "deleting"|capfirst %} {{ movie_category.name }} | {{ block.super }}{% endblock title %}
+{% block content %}
+<h1>{% trans "deleting movie category"|capfirst %} {{ movie_category.name }}</h1>
+<form method="post" action="{{ request.path }}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>
+        {% trans "are you sure you want to delete movie category" %}
+        {{ movie_category.name }}? 
+        {% trans "all movie categories"|capfirst %} {{ movie_category.movies.count }}
+        {% trans "movies will be deleted" %}.
+    </p>
+    <p>{% comment %}{% endcomment %}
+        <button type="submit">{% trans "confirm"|capfirst %}</button>
+        <a class="button" href="{% url "movie_category_detail" movie_category.pk %}">{% trans "change mind"|capfirst %}</a>
+    </p>
+</form>
+{% endblock content %}
