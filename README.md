@@ -62,10 +62,11 @@ Projekto planas:
     * \/likes 
     * \/Facebook icon 
     * Visual improvement:
-        * Improve movie detail: 
-            * add new line, 
-            * alignment center for files
-        * Background image for base.html
+        * \/ Improve movie detail: 
+            * \/ add new line, 
+            * \/ alignment center for files
+            * \/ change \/text, \/links, \/headings and \/tables color
+        * \/Background image for base.html
         * All Translations
 
     

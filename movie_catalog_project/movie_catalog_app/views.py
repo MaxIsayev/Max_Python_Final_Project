@@ -156,8 +156,7 @@ def movie_create(request: HttpRequest) -> HttpResponse:
             messages.success(request, _("movie created successfully").capitalize())
             return redirect('movie_list')
     else:
-        form = forms.MovieForm        
-    
+        form = forms.MovieForm 
     return render(request, 'movies/movie_create.html', {'form': form})
 
 @login_required
@@ -170,8 +169,7 @@ def movie_update(request: HttpRequest, pk: int) -> HttpResponse:
             messages.success(request, _("movie edited successfully"))
             return redirect('movie_detail', pk=pk)
     else:
-        form = forms.MovieForm(instance=movie)
-    form.fields['category'].queryset = form.fields['category'].queryset.filter(owner=request.user)
+        form = forms.MovieForm(instance=movie)    
     return render(request, 'movies/movie_update.html', {'form': form})
 
 @login_required

@@ -34,17 +34,26 @@
 <p>{{ movie.movie_year }}</p>
 <p>{{ movie.director }}</p>
 <p>{{ movie.genre }}</p>
-{% if movie.video_file != "" %} 
-    <video controls >
-        <source src="{{ movie.video_file.url }}" type="video/mp4">
-    </video>
+{% if movie.video_file != "" %}     
+        <center>
+            <p>{% trans "video file preview"|capfirst %}</p> 
+            <video controls >
+                <source src="{{ movie.video_file.url }}" type="video/mp4">
+            </video>
+        </center>    
 {% endif %}    
 {% if movie.video_image != "" %}  
-    <img src="{{ movie.video_image.url }}" alt="Image">  
+    <center>    
+        <p>{% trans "video image"|capfirst %}</p>    
+        <img src="{{ movie.video_image.url }}" alt="Image"> 
+    </center>
 {% endif %} 
 {% if movie.youtube_video_hash %}
-    <div class="tube">
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/{{ movie.youtube_video_hash}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
+    <center>   
+        <p>{% trans "YouTube preview"|capfirst %}</p>     
+        <div class="tube">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/{{ movie.youtube_video_hash}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </center>    
 {% endif %}
 {% endblock content %}
