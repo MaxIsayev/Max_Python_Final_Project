@@ -10,6 +10,8 @@ from django.db.models.query import QuerySet
 from django.contrib.auth import get_user_model
 from typing import Any
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
+from urllib import parse
 # Create your views here.
 
 User = get_user_model()
@@ -74,10 +76,17 @@ def movie_list(request: HttpRequest) -> HttpResponse:
     search_name = request.GET.get('search_name')
     if search_name:
         queryset = queryset.filter(name__icontains=search_name)
+    page_obj = Paginator(queryset.all(), 5).get_page(request.GET.get('page', 1))
+    gets = request.GET.copy()
+    if "page" in gets:
+        gets.pop("page")
+    filters = "&".join([f"{key}={parse.quote(value)}" for key, value in gets.items()])    
     context = {
-        'movie_list': queryset.all(),
+        'movie_list': page_obj,
         'movie_category_list': movie_categories.all(),
         'user_list': get_user_model().objects.all().order_by('username'),
+        'filters': filters,
+        'page_obj': page_obj,
     }
     return render(request, 'movies/movie_list.html', context)
 
@@ -204,9 +213,16 @@ def studio_list(request: HttpRequest) -> HttpResponse:
     search_name = request.GET.get('search_name')
     if search_name:
         queryset = queryset.filter(name__icontains=search_name)
+    page_obj = Paginator(queryset.all(), 5).get_page(request.GET.get('page', 1))
+    gets = request.GET.copy()
+    if "page" in gets:
+        gets.pop("page")
+    filters = "&".join([f"{key}={parse.quote(value)}" for key, value in gets.items()])    
     context = {
-        'studio_list': queryset.all(),        
+        'studio_list': page_obj,        
         'user_list': get_user_model().objects.all().order_by('username'),
+        'filters': filters,
+        'page_obj': page_obj,
     }
     return render(request, 'movies/studio_list.html', context)
 

@@ -1,0 +1,15 @@
+<ul class="paginator">
+    {% if page_obj.has_previous %}
+        <li><a href="{{ request.path }}?page=1&{{ filters }}">&LeftArrowBar;</a></li>
+        <li><a href="{{ request.path }}?page={{ page_obj.previous_page_number }}&{{ filters }}">&ShortLeftArrow;</a></li>
+    {% endif %}
+    {% if page_obj.paginator.num_pages > 1 %}
+        {% for page in page_obj.paginator.page_range %}
+            <li {% if page == page_obj.number %}class="current"{% endif %}><a href="{{ request.path }}?page={{ page }}&{{ filters }}">{{ page }}</a></li>
+        {% endfor %}
+    {% endif %}
+    {% if page_obj.has_next %}
+        <li><a href="{{ request.path }}?page={{ page_obj.next_page_number }}&{{ filters }}">&ShortRightArrow;</a></li>
+        <li><a href="{{ request.path }}?page={{ page_obj.paginator.num_pages }}&{{ filters }}">&RightArrowBar;</a></li>
+    {% endif %}
+</ul>
