@@ -39,7 +39,7 @@ Projekto planas:
 4) \/ Translations
     1) \/Translating code
     2) \/Multilingual Config
-
+    3) All Translations cannot be done
 5) \/ User Profile
 6) \/ Generic Views
     1) \/ Class based views
@@ -66,8 +66,7 @@ Projekto planas:
             * \/ add new line, 
             * \/ alignment center for files
             * \/ change \/text, \/links, \/headings and \/tables color
-        * \/Background image for base.html
-        * All Translations
+        * \/Background image for base.html      
 
     
 
@@ -75,7 +74,7 @@ Projekto papildomas planas:
 
 10) Docker
 11) client support
-12) paginator
+12) * paginator
 
 Problemos:
 

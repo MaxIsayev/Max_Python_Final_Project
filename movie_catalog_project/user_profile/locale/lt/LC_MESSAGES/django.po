@@ -29,10 +29,6 @@ msgstr "vartotojo profilis"
 msgid "user"
 msgstr "vartotojas"
 
-#: user_profile/models.py:11
-msgid "picture"
-msgstr "paveikslas"
-
 #: user_profile/models.py:14
 #: user_profile/templates/user_profile/user_update.html:4
 msgid "profile"
@@ -176,11 +172,12 @@ msgstr "redaguoti profilio duomenis"
 msgid "e-mail"
 msgstr "el. paštas"
 
+#: user_profile/models.py:11
 #: user_profile/templates/user_profile/user_detail.html:13
-#, fuzzy
-#| msgid "picture"
-msgid "no picture found"
+msgid "picture"
 msgstr "paveikslas"
+
+
 
 #: user_profile/templates/user_profile/user_update.html:2
 #: user_profile/templates/user_profile/user_update.html:4
