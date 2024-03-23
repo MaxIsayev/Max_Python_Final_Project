@@ -39,26 +39,36 @@ Projekto planas:
 4) \/ Translations
     1) \/Translating code
     2) \/Multilingual Config
+
 5) \/ User Profile
 6) \/ Generic Views
     1) \/ Class based views
     2) \/ Update and delete
 7) \/ Function views more
-    1) \/ functional movie views (done basic)
-    2) \/ edit delete (done basic)
+    1) \/ functional movie views
+    2) \/ edit delete
     3) \/ index 
-    4) Studio
-        * Create
-        * Update
-        * Delete
-        * List
-        * Detail
+    4) \/Studio
+        * \/Create
+        * \/Update
+        * \/Delete
+        * \/List
+        * \/Detail
+        * \/Like
 8) \/Tiny MCE 
 9) \/Kiti: 
     * \/profile picture 
     * \/youtube link
     * \/likes 
-    * \/Facebook icon     
+    * \/Facebook icon 
+    * Visual improvement:
+        * Improve movie detail: 
+            * add new line, 
+            * alignment center for files
+        * Background image for base.html
+        * All Translations
+
+    
 
 Projekto papildomas planas:
 
@@ -69,10 +79,5 @@ Projekto papildomas planas:
 Problemos:
 
 * nesiverčia profilyje žodis "Picture"
-* ne visi class based views veikia, tenka naudoti functional views
-* neveikia kodas 
-
-form.fields['project'].queryset = form.fields['project'].queryset.filter(owner=request.user) 
-
-Todėl jo tenka nenaudoti arba naudoti class based view
- 
+* ne visi class based views veikia template'uose, tenka naudoti functional views
+* super vartotojas negali redaguoti ir šalinti kito vartotojo filmų kategorijas

@@ -13,7 +13,7 @@
                 <option value="{{ like_type.0 }}">{{ like_type.1|safe }}</option>
             {% endfor %}
         </select>
-    </form>
+    </form> 
     {% endif %}
     {% for like in movie.likes_by_type %}
         {% for like_type in like_types %}

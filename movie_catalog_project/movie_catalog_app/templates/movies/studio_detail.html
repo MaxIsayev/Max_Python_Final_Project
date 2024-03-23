@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{{ block.super }} | {{ studio }}{% endblock title %}
+{% block content %}
+<h1>{{ studio.name }}</h1>
+<div class="toolbar">
+    {% if request.user.is_authenticated %}
+    <form action="{% url "studio_like" studio.pk %}" method="get">
+        <input type="hidden" name="next" value="{{ request.path }}">
+        <select class="like-type" name="like_type" onchange="this.form.submit();">
+            <option value="">{% trans "like" %}</option>
+            {% for like_type in like_types %}
+                <option value="{{ like_type.0 }}">{{ like_type.1|safe }}</option>
+            {% endfor %}
+        </select>
+    </form>
+    {% endif %}
+    {% for like in studio.likes_by_type %}
+        {% for like_type in like_types %}
+            {% if like_type.0 == like.like_type%}{{ like_type.1|safe }}: {{ like.count }}{% endif %}
+        {% endfor %}
+    {% endfor %}
+</div>
+{% if studio.owner == request.user %}
+    <p>
+        <a class="button" href="{% url "studio_update" studio.pk %}">{% trans "edit"|capfirst %}</a>
+        <a class="button" href="{% url "studio_delete" studio.pk %}">{% trans "delete"|capfirst %}</a>
+    </p>
+{% endif %}
+<p>{{ studio.description|safe }}</p>
+<p>{{ studio.owner }}</p>
+<p>{{ studio.city }}</p>
+<p>{{ studio.country }}</p>
+<p>{{ studio.year_start }}</p>
+<p>{{ studio.year_end }}</p>
+<p>{{ studio.founder }}</p>
+{% endblock content %}

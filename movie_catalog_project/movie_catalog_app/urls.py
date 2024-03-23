@@ -15,6 +15,12 @@ urlpatterns = [
     path('movie/<int:pk>/edit/', views.movie_update, name='movie_update'),
     path('movie/<int:pk>/delete/', views.movie_delete, name='movie_delete'),
     path('movie/<int:pk>/like/', views.movie_like, name='movie_like'),
+    path('studios/', views.studio_list, name='studio_list'),
+    path('studio/<int:pk>/', views.studio_detail, name='studio_detail'),
+    path('studio/create/', views.studio_create, name='studio_create'),
+    path('studio/<int:pk>/edit/', views.studio_update, name='studio_update'),
+    path('studio/<int:pk>/delete/', views.studio_delete, name='studio_delete'),
+    path('studio/<int:pk>/like/', views.studio_like, name='studio_like'),
 ]
 
 

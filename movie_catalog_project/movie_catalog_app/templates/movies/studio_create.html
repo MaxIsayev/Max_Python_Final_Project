@@ -1,0 +1,10 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% trans "create a studio at"|capfirst %} {{ block.super }}{% endblock title %}
+{% block content %}
+<h1>{% trans "create a studio"|capfirst %}</h1>
+<form method="POST" action="{{ request.path }}?next={{ request.GET.next|urlencode }}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p><button type="submit">{% trans "create"|capfirst %}</button></p>
+</form>
+{% endblock content %}

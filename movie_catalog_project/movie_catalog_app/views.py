@@ -26,7 +26,7 @@ def index(request: HttpRequest) -> HttpResponse:
         (
             _('studios').title(), 
             models.Studio.objects.count(), 
-            reverse('movie_list'),#fix 
+            reverse('studio_list'),
         ),
         (
             _('movies').title(), 
@@ -55,7 +55,6 @@ def index(request: HttpRequest) -> HttpResponse:
         'user_catalog': user_catalog,       
     }
     return render(request, 'movies/index.html', context)
-
 
 def movie_list(request: HttpRequest) -> HttpResponse:
     queryset = models.Movie.objects
@@ -150,17 +149,14 @@ def movie_category_delete(request: HttpRequest, pk: int) -> HttpResponse:
 @login_required
 def movie_create(request: HttpRequest) -> HttpResponse:
     if request.method == "POST":
-        form = forms.MovieForm(request.POST, request.FILES)
-        print("POST processing")
-        if form.is_valid():
-            print("form valid")
+        form = forms.MovieForm(request.POST, request.FILES)        
+        if form.is_valid():            
             form.instance.owner = request.user
             form.save()
             messages.success(request, _("movie created successfully").capitalize())
             return redirect('movie_list')
     else:
-        form = forms.MovieForm
-        print("NOTTT POST processing")
+        form = forms.MovieForm        
     
     return render(request, 'movies/movie_create.html', {'form': form})
 
@@ -199,3 +195,73 @@ def movie_like(request: HttpRequest, pk: int) -> HttpResponse:
     if request.GET.get('next'):
         return redirect(request.GET.get('next'))
     return redirect('movie_list')
+
+def studio_list(request: HttpRequest) -> HttpResponse:
+    queryset = models.Studio.objects
+    owner_username = request.GET.get('owner')
+    if owner_username:
+        owner = get_object_or_404(get_user_model(), username=owner_username)
+        queryset = queryset.filter(owner=owner)          
+    
+    search_name = request.GET.get('search_name')
+    if search_name:
+        queryset = queryset.filter(name__icontains=search_name)
+    context = {
+        'studio_list': queryset.all(),        
+        'user_list': get_user_model().objects.all().order_by('username'),
+    }
+    return render(request, 'movies/studio_list.html', context)
+
+def studio_detail(request: HttpRequest, pk:int) -> HttpResponse:
+    return render(request, 'movies/studio_detail.html', {
+        'studio': get_object_or_404(models.Studio, pk=pk),
+        'like_types': models.LIKE_TYPE_CHOICES,
+    })
+
+@login_required
+def studio_create(request: HttpRequest) -> HttpResponse:
+    if request.method == "POST":
+        form = forms.StudioForm(request.POST)        
+        if form.is_valid():            
+            form.instance.owner = request.user
+            form.save()
+            messages.success(request, _("studio created successfully").capitalize())
+            return redirect('studio_list')
+    else:
+        form = forms.StudioForm 
+    return render(request, 'movies/studio_create.html', {'form': form})
+
+@login_required
+def studio_update(request: HttpRequest, pk: int) -> HttpResponse:
+    studio = get_object_or_404(models.Studio, pk=pk, owner=request.user)
+    if request.method == "POST":
+        form = forms.StudioForm(request.POST, request.FILES, instance=studio)
+        if form.is_valid():
+            form.save()
+            messages.success(request, _("studio edited successfully"))
+            return redirect('studio_detail', pk=pk)
+    else:
+        form = forms.StudioForm(instance=studio)    
+    return render(request, 'movies/studio_update.html', {'form': form})
+
+@login_required
+def studio_delete(request: HttpRequest, pk: int) -> HttpResponse:
+    studio = get_object_or_404(models.Studio, pk=pk, owner=request.user)
+    if request.method == "POST":
+        studio.delete()
+        messages.success(request, _("studio deleted successfully"))
+        return redirect('studio_list')
+    return render(request, 'movies/studio_delete.html', {'studio': studio, 'object': studio})
+
+@login_required
+def studio_like(request: HttpRequest, pk: int) -> HttpResponse:
+    studio = get_object_or_404(models.Studio, pk=pk)
+    like_type = request.GET.get('like_type') or 3
+    like = models.StudioLike.objects.filter(studio=studio, user=request.user, like_type=like_type).first()
+    if not like:
+         models.StudioLike.objects.create(studio=studio, user=request.user, like_type=like_type)
+    else:
+        like.delete()
+    if request.GET.get('next'):
+        return redirect(request.GET.get('next'))
+    return redirect('studio_list')

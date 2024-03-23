@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{{ block.super }} list{% endblock title %}
+{% block content %}
+<h1>{% trans "studios"|capfirst %}</h1>
+<div class="toolbar">
+    <a class="button" href="{% url "studio_create" %}">{% trans "create new studio"|title %}</a>
+    <form method="get" action="{{ request.path }}">
+        <select name="owner" onchange="this.form.submit();">
+            <option value="">{% trans "filter by owner"|capfirst %}</option>
+            {% for user in user_list %}
+                <option value="{{ user.username }}" {% if user.username == request.GET.owner %}selected{% endif %}>{{ user.first_name }} {{ user.last_name }} ({{ user.username }})</option>
+            {% endfor %}
+        </select>        
+        <input type="text" name="search_name" value="{{ request.GET.search_name }}" placeholder="{% trans 'search by name' %}...">
+        <button type="submit">&#128269;</button>
+    </form>
+</div>
+<div style="overflow-x:auto;">
+    <table>
+    <tr>
+        <th>{% trans "name"|capfirst %}</th>  
+        <th>{% trans "owner"|capfirst %}</th>          
+        <th>{% trans "city"|capfirst %}</th>  
+        <th>{% trans "country"|capfirst %}</th>  
+        <th>{% trans "year start"|capfirst %}</th>  
+        <th>{% trans "year end"|capfirst %}</th>  
+        <th>{% trans "founder"|capfirst %}</th>             
+    </tr>
+    {% for studio in studio_list %}
+        <tr>
+            <td><a href="{% url "studio_detail" studio.pk %}">{{ studio.name }}</a></td>
+            <td>{{ studio.owner }}</td>             
+            <td>{{ studio.city }}</td>
+            <td>{{ studio.country }}</td>
+            <td>{{ studio.year_start }}</td>
+            <td>{{ studio.year_end }}</td>
+            <td>{{ studio.founder }}</td>            
+        </tr> 
+        {% empty %}
+        <tr>
+            <td>{% trans "no studios Found"|capfirst %}</td>
+        </tr> 
+    {% endfor %}
+    </table>
+</div>
+{% endblock content %}
