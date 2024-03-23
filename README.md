@@ -79,6 +79,11 @@ Projekto papildomas planas:
 
 Problemos:
 
-* nesiverčia profilyje žodis "Picture"
-* ne visi class based views veikia template'uose, tenka naudoti functional views
-* super vartotojas negali redaguoti ir šalinti kito vartotojo filmų kategorijas
+* ne visur veikia vertimai
+    * movie category create nes forma arba view
+    * movie category update nes forma arba view    
+    * movie create nes forma arba view    
+    * movie update  nes forma arba view
+    * studio create nes forma arba view
+    * studio update nes forma arba view
+    * nesiverčia profilyje žodis "Picture"

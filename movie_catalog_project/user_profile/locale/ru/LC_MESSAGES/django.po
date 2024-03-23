@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 11:38+0200\n"
+"POT-Creation-Date: 2024-03-23 18:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
 #: user_profile/apps.py:8
 msgid "user profile"
 msgstr "профиль пользователя"
@@ -36,11 +37,6 @@ msgstr "картинка"
 #: user_profile/templates/user_profile/user_update.html:4
 msgid "profile"
 msgstr "профиль"
-
-#: user_profile/models.py:14
-#: user_profile/templates/user_profile/user_update.html:4
-msgid "Picture:"
-msgstr "Картинка:"
 
 #: user_profile/models.py:15
 msgid "profiles"
@@ -110,7 +106,8 @@ msgstr "восстановить пароль"
 
 #: user_profile/templates/registration/password_reset_confirm.html:12
 msgid "Password Reset Failed: the link has expired and is no longer valid."
-msgstr "Восстановление пароля провалено: ссылка больше недействительна и не подходит"
+msgstr ""
+"Восстановление пароля провалено: ссылка больше недействительна и не подходит"
 
 #: user_profile/templates/registration/password_reset_done.html:2
 #: user_profile/templates/registration/password_reset_form.html:2
@@ -130,8 +127,8 @@ msgstr "Мы отправили дальнейшие указания по эл.
 msgid ""
 "Hello,\n"
 "\n"
-"Someone has requested the password change at Movie Catalog. If it was not you, "
-"please ignore this email.\n"
+"Someone has requested the password change at Movie Catalog. If it was not "
+"you, please ignore this email.\n"
 "\n"
 "You can change your password by following this link:"
 msgstr ""
@@ -141,15 +138,21 @@ msgstr ""
 "пожалуйста проигнорируйте это сообщение.\n"
 "\n"
 "Вы можете изменить пароль по этой ссылке:"
+
 #: user_profile/templates/registration/password_reset_email.html:8
+#, fuzzy
+#| msgid ""
+#| "Best regards,\n"
+#| "Movie Catalog Team"
 msgid ""
 "Best regards,\n"
 "Movie Catalog Team"
 msgstr ""
 "С уважением,\n"
 "Movie Catalog команда"
+
 #: user_profile/templates/registration/password_reset_form.html:8
-#: user_profile/templates/user_profile/user_update.html:9
+#: user_profile/templates/user_profile/user_update.html:10
 msgid "confirm"
 msgstr "подтвердить"
 
@@ -174,6 +177,12 @@ msgstr "редактировать данные профиля"
 msgid "e-mail"
 msgstr "эл. почта"
 
+#: user_profile/templates/user_profile/user_detail.html:13
+#, fuzzy
+#| msgid "picture"
+msgid "no picture found"
+msgstr "картинка"
+
 #: user_profile/templates/user_profile/user_update.html:2
 #: user_profile/templates/user_profile/user_update.html:4
 msgid "editing"
@@ -183,10 +192,13 @@ msgstr "редактируя"
 msgid "profile at"
 msgstr "профиль в"
 
-#: user_profile/views.py:16
+#: user_profile/views.py:17
 msgid "Thank you! You can now log in with your credentials."
 msgstr "Спасибо! Теперь вы можете войти с новыми данными."
 
-#: user_profile/views.py:42
+#: user_profile/views.py:45
 msgid "profile edited successfully"
 msgstr "профиль отредактирован успешно"
+
+#~ msgid "Picture:"
+#~ msgstr "Картинка:"

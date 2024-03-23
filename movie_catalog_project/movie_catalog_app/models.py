@@ -14,7 +14,7 @@ class MovieCategory(models.Model):
         on_delete=models.CASCADE,
         related_name='movie_categories',
     )
-    description = HTMLField(max_length=10000, null=True, blank=True)   
+    description = HTMLField(_("description"), max_length=10000, null=True, blank=True)   
 
     class Meta:
         verbose_name = _("movie category")
@@ -61,7 +61,7 @@ class Studio(models.Model):
 
 class Movie(models.Model):
     name = models.CharField(_("name"), max_length=100, db_index=True)
-    description = HTMLField(max_length=10000, null=True, blank=True)
+    description = HTMLField(_("description"), max_length=10000, null=True, blank=True)
     category = models.ForeignKey(
         MovieCategory,
         verbose_name=_("category"), 

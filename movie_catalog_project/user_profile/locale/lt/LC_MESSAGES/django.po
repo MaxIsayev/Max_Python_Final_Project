@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 11:37+0200\n"
+"POT-Creation-Date: 2024-03-23 18:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < "
 "11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
 "1 : n % 1 != 0 ? 2: 3);\n"
+
 #: user_profile/apps.py:8
 msgid "user profile"
 msgstr "vartotojo profilis"
@@ -36,11 +37,6 @@ msgstr "paveikslas"
 #: user_profile/templates/user_profile/user_update.html:4
 msgid "profile"
 msgstr "profilis"
-
-#: user_profile/models.py:14
-#: user_profile/templates/user_profile/user_update.html:4
-msgid "Picture:"
-msgstr "Paveiksliukas:"
 
 #: user_profile/models.py:15
 msgid "profiles"
@@ -130,8 +126,8 @@ msgstr "Mes atsiuntėm tolimesnes instrukcijas el. paštu "
 msgid ""
 "Hello,\n"
 "\n"
-"Someone has requested the password change at Movie Catalog. If it was not you, "
-"please ignore this email.\n"
+"Someone has requested the password change at Movie Catalog. If it was not "
+"you, please ignore this email.\n"
 "\n"
 "You can change your password by following this link:"
 msgstr ""
@@ -141,15 +137,21 @@ msgstr ""
 "prašom ignoruoti šią žinutę.\n"
 "\n"
 "Jūs galite pakeisti slaptažodį siekimami šią nuorodą:"
+
 #: user_profile/templates/registration/password_reset_email.html:8
+#, fuzzy
+#| msgid ""
+#| "Best regards,\n"
+#| "Movie Catalog Team"
 msgid ""
 "Best regards,\n"
 "Movie Catalog Team"
 msgstr ""
 "Pagarbiai,\n"
 "Movie Catalog komanda"
+
 #: user_profile/templates/registration/password_reset_form.html:8
-#: user_profile/templates/user_profile/user_update.html:9
+#: user_profile/templates/user_profile/user_update.html:10
 msgid "confirm"
 msgstr "patvirtinti"
 
@@ -174,6 +176,12 @@ msgstr "redaguoti profilio duomenis"
 msgid "e-mail"
 msgstr "el. paštas"
 
+#: user_profile/templates/user_profile/user_detail.html:13
+#, fuzzy
+#| msgid "picture"
+msgid "no picture found"
+msgstr "paveikslas"
+
 #: user_profile/templates/user_profile/user_update.html:2
 #: user_profile/templates/user_profile/user_update.html:4
 msgid "editing"
@@ -183,10 +191,13 @@ msgstr "redaguojamas"
 msgid "profile at"
 msgstr "profilis "
 
-#: user_profile/views.py:16
+#: user_profile/views.py:17
 msgid "Thank you! You can now log in with your credentials."
 msgstr "Ačiū! Dabar jūs galite prisijungti su naujais duomenimis"
 
-#: user_profile/views.py:42
+#: user_profile/views.py:45
 msgid "profile edited successfully"
 msgstr "profilis redaguotas sėkmingai"
+
+#~ msgid "Picture:"
+#~ msgstr "Paveiksliukas:"
