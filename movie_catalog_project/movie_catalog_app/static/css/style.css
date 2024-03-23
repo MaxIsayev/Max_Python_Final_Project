@@ -259,6 +259,10 @@ ul.catalog li .stat {
 }
 .toolbar form select.like-type {
     margin: 0; padding: 0;
-    background-color: transparent;
+    background-color: white;
     border: none;
+    color: darkgoldenrod;
+    font-size: 24pt;
 }
+
+ 

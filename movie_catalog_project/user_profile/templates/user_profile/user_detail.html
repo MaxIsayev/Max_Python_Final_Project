@@ -5,11 +5,13 @@
 <p>{{ object.first_name }} {{ object.last_name }}</p>
 {% if object == request.user %}
     <p><a class="button" href="{% url "user_update" %}">{% trans "edit profile data" %}</a></p>
-    <p>{% trans "e-mail"|capfirst %}: {{ object.email }}</p>  
+    <p>{% trans "e-mail"|capfirst %}: {{ object.email }}</p> 
+    <center> 
     {% if profile.picture.url != "" %}  
         <img src="{{ profile.picture.url }}" alt="Image">  
         {% else %}  
         <p>{% trans "no picture found"|title %}</p>
         {% endif %}
+    </center>
 {% endif %}
 {% endblock content %}
