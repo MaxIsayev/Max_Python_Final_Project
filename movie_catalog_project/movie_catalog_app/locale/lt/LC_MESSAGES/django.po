@@ -333,7 +333,7 @@ msgstr "redaguojama filmų kategorija"
 
 #: movie_catalog_app/templates/movies/movie_create.html:2
 msgid "create a movie at"
-msgstr "naujesni filmai"
+msgstr "sukurti filmą ..."
 
 #: movie_catalog_app/templates/movies/movie_create.html:4
 msgid "create a movie"
@@ -411,7 +411,7 @@ msgstr "filmų nerasta"
 
 #: movie_catalog_app/templates/movies/movie_update.html:4
 msgid "editing movie"
-msgstr "naujesni filmai"
+msgstr "redaguojamas filmas"
 
 #: movie_catalog_app/templates/movies/studio_create.html:2
 msgid "create a studio at"

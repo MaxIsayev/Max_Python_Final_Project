@@ -39,7 +39,7 @@ Projekto planas:
 4) \/ Translations
     1) \/Translating code
     2) \/Multilingual Config
-    3) * All Translations cannot be done
+    3) \/ All Translations done
 5) \/ User Profile
 6) \/ Generic Views
     1) \/ Class based views
