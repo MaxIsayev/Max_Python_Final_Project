@@ -39,7 +39,7 @@ Projekto planas:
 4) \/ Translations
     1) \/Translating code
     2) \/Multilingual Config
-    3) All Translations cannot be done
+    3) * All Translations cannot be done
 5) \/ User Profile
 6) \/ Generic Views
     1) \/ Class based views
@@ -61,7 +61,7 @@ Projekto planas:
     * \/youtube link
     * \/likes 
     * \/Facebook icon 
-    * Visual improvement:
+    * \/ Visual improvement:
         * \/ Improve movie detail: 
             * \/ add new line, 
             * \/ alignment center for files
@@ -73,16 +73,10 @@ Projekto planas:
 Projekto papildomas planas:
 
 10) Docker
-11) client support
-12) * paginator
+12) \/ paginator
 
 Problemos:
 
-* ne visur veikia vertimai
-    * movie category create nes forma arba view
-    * movie category update nes forma arba view    
-    * movie create nes forma arba view    
-    * movie update  nes forma arba view
-    * studio create nes forma arba view
-    * studio update nes forma arba view
-    * nesiverčia profilyje žodis "Picture"
+* ne visur veikia vertimai     
+    * studio create nes forma arba view laukas Description
+    * studio update nes forma arba view laukas Description 

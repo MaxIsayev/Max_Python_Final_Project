@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 20:04+0200\n"
+"POT-Creation-Date: 2024-03-25 15:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,8 +49,6 @@ msgid "files and links"
 msgstr "failai ir nuorodos"
 
 #: movie_catalog_app/apps.py:10
-#, fuzzy
-#| msgid "movie_catalog_app"
 msgid "movie catalog app"
 msgstr "filmų katalogo aplikacija"
 
@@ -70,12 +68,6 @@ msgid "owner"
 msgstr "savininkas"
 
 #: movie_catalog_app/models.py:17 movie_catalog_app/models.py:64
-#: movie_catalog_app/models.py:17 movie_catalog_app/movie_category_create.html:64
-#: movie_catalog_app/models.py:17 movie_catalog_app/movie_category_update.html:64
-#: movie_catalog_app/models.py:17 movie_catalog_app/movie_create.html:64
-#: movie_catalog_app/models.py:17 movie_catalog_app/movie_update.html:64
-#: movie_catalog_app/models.py:17 movie_catalog_app/studio_create.html:64
-#: movie_catalog_app/models.py:17 movie_catalog_app/studio_update.html:64
 msgid "description"
 msgstr "aprašymas"
 
@@ -86,7 +78,7 @@ msgstr "filmų kategorija"
 #: movie_catalog_app/models.py:21 movie_catalog_app/templates/base.html:21
 #: movie_catalog_app/templates/movies/movie_category_list.html:2
 #: movie_catalog_app/templates/movies/movie_category_list.html:4
-#: movie_catalog_app/views.py:22 movie_catalog_app/views.py:41
+#: movie_catalog_app/views.py:24 movie_catalog_app/views.py:43
 msgid "movie categories"
 msgstr "filmų kategorijos"
 
@@ -123,7 +115,7 @@ msgstr "studija"
 
 #: movie_catalog_app/models.py:48 movie_catalog_app/templates/base.html:22
 #: movie_catalog_app/templates/movies/studio_list.html:5
-#: movie_catalog_app/views.py:27
+#: movie_catalog_app/views.py:29
 msgid "studios"
 msgstr "studijos"
 
@@ -180,7 +172,7 @@ msgstr "filmas"
 #: movie_catalog_app/templates/base.html:20
 #: movie_catalog_app/templates/movies/movie_category_detail.html:18
 #: movie_catalog_app/templates/movies/movie_list.html:5
-#: movie_catalog_app/views.py:32 movie_catalog_app/views.py:46
+#: movie_catalog_app/views.py:34 movie_catalog_app/views.py:48
 msgid "movies"
 msgstr "filmai"
 
@@ -253,8 +245,6 @@ msgid "nothing here"
 msgstr "nieko nėra čia"
 
 #: movie_catalog_app/templates/movies/movie_category_create.html:2
-#, fuzzy
-#| msgid "movie category"
 msgid "create a movie category at"
 msgstr "filmų kategorija"
 
@@ -342,8 +332,6 @@ msgid "editing movie category"
 msgstr "redaguojama filmų kategorija"
 
 #: movie_catalog_app/templates/movies/movie_create.html:2
-#, fuzzy
-#| msgid "recent movies"
 msgid "create a movie at"
 msgstr "naujesni filmai"
 
@@ -446,56 +434,50 @@ msgid "create new studio"
 msgstr "sukurti naują studiją"
 
 #: movie_catalog_app/templates/movies/studio_list.html:42
-#, fuzzy
-#| msgid "no movies Found"
 msgid "no studios Found"
 msgstr "filmų nerasta"
 
 #: movie_catalog_app/templates/movies/studio_update.html:4
-#, fuzzy
-#| msgid "studio"
 msgid "editing studio"
 msgstr "studija"
 
-#: movie_catalog_app/views.py:20
-#, fuzzy
-#| msgid "users:"
+#: movie_catalog_app/views.py:22
 msgid "users"
 msgstr "vartotojai:"
 
-#: movie_catalog_app/views.py:117
+#: movie_catalog_app/views.py:126
 msgid "movie category created successfully"
 msgstr "filmų kategorija sukurta sėkmingai"
 
-#: movie_catalog_app/views.py:134
+#: movie_catalog_app/views.py:143
 msgid "movie category updated successfully"
 msgstr "filmų kategorija redaguota sėkmingai"
 
-#: movie_catalog_app/views.py:145
+#: movie_catalog_app/views.py:154
 msgid "movie category deleted successfully"
 msgstr "filmų kategorija pašalinta sėkmingai"
 
-#: movie_catalog_app/views.py:156
+#: movie_catalog_app/views.py:165
 msgid "movie created successfully"
 msgstr "filmas sukurtas sėkmingai"
 
-#: movie_catalog_app/views.py:169
+#: movie_catalog_app/views.py:178
 msgid "movie edited successfully"
 msgstr "filmas redaguotas sėkmingai"
 
-#: movie_catalog_app/views.py:180
+#: movie_catalog_app/views.py:189
 msgid "movie deleted successfully"
 msgstr "filmas pašalintas sėkmingai"
 
-#: movie_catalog_app/views.py:226
+#: movie_catalog_app/views.py:242
 msgid "studio created successfully"
 msgstr "studija sukurta sėkmingai"
 
-#: movie_catalog_app/views.py:239
+#: movie_catalog_app/views.py:255
 msgid "studio edited successfully"
 msgstr "studija redaguota sėkmingai"
 
-#: movie_catalog_app/views.py:250
+#: movie_catalog_app/views.py:266
 msgid "studio deleted successfully"
 msgstr "studija pašalinta sėkmingai"
 

@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.urls import reverse
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 from tinymce.models import HTMLField
 
 # Create your models here.
@@ -30,7 +30,7 @@ class MovieCategory(models.Model):
 
 class Studio(models.Model):
     name = models.CharField(_("name"), max_length=100, db_index=True)
-    description = HTMLField(max_length=10000, null=True, blank=True)
+    description = HTMLField(_("description"), max_length=10000, null=True, blank=True)
     owner = models.ForeignKey(
         get_user_model(), 
         verbose_name=_("owner"), 

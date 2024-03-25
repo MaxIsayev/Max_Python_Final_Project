@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 18:36+0200\n"
+"POT-Creation-Date: 2024-03-25 15:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,6 +28,10 @@ msgstr "vartotojo profilis"
 #: user_profile/templates/user_profile/user_detail.html:4
 msgid "user"
 msgstr "vartotojas"
+
+#: user_profile/models.py:11
+msgid "picture"
+msgstr "paveikslas"
 
 #: user_profile/models.py:14
 #: user_profile/templates/user_profile/user_update.html:4
@@ -172,12 +176,11 @@ msgstr "redaguoti profilio duomenis"
 msgid "e-mail"
 msgstr "el. paštas"
 
-#: user_profile/models.py:11
 #: user_profile/templates/user_profile/user_detail.html:13
-msgid "picture"
+#, fuzzy
+#| msgid "picture"
+msgid "no picture found"
 msgstr "paveikslas"
-
-
 
 #: user_profile/templates/user_profile/user_update.html:2
 #: user_profile/templates/user_profile/user_update.html:4
