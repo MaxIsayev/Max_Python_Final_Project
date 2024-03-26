@@ -75,8 +75,3 @@ Projekto papildomas planas:
 10) Docker
 12) \/ paginator
 
-Problemos:
-
-* ne visur veikia vertimai     
-    * studio create nes forma arba view laukas Description
-    * studio update nes forma arba view laukas Description 

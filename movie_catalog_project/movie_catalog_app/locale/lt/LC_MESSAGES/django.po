@@ -435,7 +435,7 @@ msgstr "sukurti naują studiją"
 
 #: movie_catalog_app/templates/movies/studio_list.html:42
 msgid "no studios Found"
-msgstr "filmų nerasta"
+msgstr "studijų nerasta"
 
 #: movie_catalog_app/templates/movies/studio_update.html:4
 msgid "editing studio"
