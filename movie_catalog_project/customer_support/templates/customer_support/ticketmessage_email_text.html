@@ -1,0 +1,11 @@
+Ticket: #{{ obj.ticket.id }}: {{ obj.ticket.subject }}, status: {{ obj.ticket.status }}
+Sender: {{ obj.sender_name }} <{{ obj.sender_email }}>
+Sent: {{ obj.sent_at }}
+----------
+{{ obj.body }}
+----------
+You can reply to this message or by using the link below:
+http://localhost:8000/{% url "ticket_detail" obj.ticket.pk %}?access_key={{ obj.ticket.access_key }}
+----------
+Best regards,
+TASKer customer support team

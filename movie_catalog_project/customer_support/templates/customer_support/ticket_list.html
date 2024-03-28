@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{{ block.super }} {% trans "customer support" %}{% endblock title %}
+{% block content %}
+<h1>{% trans "customer support"|capfirst %}</h1>
+<ul>
+{% for ticket in ticket_list %}
+    <li><a href="{% url "ticket_detail" ticket.pk %}">{{ ticket }}</a></li>
+{% empty %}
+    <li>{% trans "No customer support tickets found." %}</li>
+{% endfor %}
+</ul>
+{% endblock content %}

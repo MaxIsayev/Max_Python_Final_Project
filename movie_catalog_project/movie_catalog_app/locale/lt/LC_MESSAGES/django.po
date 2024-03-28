@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 15:25+0200\n"
+"POT-Creation-Date: 2024-03-28 18:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,7 +67,8 @@ msgstr "pavadinimas"
 msgid "owner"
 msgstr "savininkas"
 
-#: movie_catalog_app/models.py:17 movie_catalog_app/models.py:64
+#: movie_catalog_app/models.py:17 movie_catalog_app/models.py:33
+#: movie_catalog_app/models.py:64
 msgid "description"
 msgstr "aprašymas"
 
@@ -208,23 +209,31 @@ msgstr "filmo katalogas"
 msgid "main page"
 msgstr "Pagrindinis"
 
-#: movie_catalog_app/templates/base.html:29
+#: movie_catalog_app/templates/base.html:23
+msgid "contact"
+msgstr "kontaktas"
+
+#: movie_catalog_app/templates/base.html:30
 msgid "admin"
 msgstr "administratorius"
 
-#: movie_catalog_app/templates/base.html:31
+#: movie_catalog_app/templates/base.html:32
+msgid "tickets"
+msgstr "bilietai"
+
+#: movie_catalog_app/templates/base.html:34
 msgid "log out"
 msgstr "išeiti"
 
-#: movie_catalog_app/templates/base.html:33
+#: movie_catalog_app/templates/base.html:36
 msgid "log in"
 msgstr "prisijungti"
 
-#: movie_catalog_app/templates/base.html:34
+#: movie_catalog_app/templates/base.html:37
 msgid "sign up"
 msgstr "užsiregistruoti"
 
-#: movie_catalog_app/templates/base.html:59
+#: movie_catalog_app/templates/base.html:62
 msgid "community on discord"
 msgstr "discordo bendruomenė"
 

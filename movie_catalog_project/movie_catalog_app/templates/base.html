@@ -20,6 +20,7 @@
             <li><a href="{% url 'movie_list' %}">{% trans "movies"|capfirst %}</a></li>
             <li><a href="{% url 'movie_category_list' %}">{% trans "movie categories"|capfirst %}</a></li>
             <li><a href="{% url 'studio_list' %}">{% trans "studios"|capfirst %}</a></li>
+            <li><a href="{% url "ticket_create" %}">{% trans "contact"|capfirst %}</a></li>
         </ul>
         <span class="spacer"></span>
         <ul class="nav nav-user">
@@ -27,6 +28,8 @@
                 <li><a href="{% url 'user_detail_current' %}">{{ user }}</a></li>
                 {% if user.is_superuser or user.is_staff %}
                     <li><a href="{% url 'admin:index' %}">{% trans "admin"|capfirst %}</a></li>
+                {% else %}
+                    <li><a href="{% url "ticket_list" %}">{% trans "tickets" %}</a></li>
                 {% endif %}
                 <li><form method="post" action="{% url "logout" %}">{% csrf_token %}<button type="submit">{% trans "log out"|capfirst %}</button></form></li>
             {% else %}

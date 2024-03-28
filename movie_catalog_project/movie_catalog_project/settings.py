@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'user_profile', 
+    'user_profile',
+    'customer_support', 
     'movie_catalog_app',
     'tinymce',
     'django.contrib.admin',
@@ -151,6 +152,9 @@ TINYMCE_DEFAULT_CONFIG = {
                "ltr rtl | showcomments addcomment code",
     "custom_undo_redo_levels": 10,
 }
+
+ADMIN_EMAIL = "max485620@gmail.com"
+ADMIN_NAME = "Customer Support"
 
 LOGIN_REDIRECT_URL = '/'
 

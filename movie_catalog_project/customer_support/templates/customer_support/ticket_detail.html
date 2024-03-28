@@ -1,0 +1,21 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{{ block.super }} {% trans "ticket" %} #{{ object.pk }}{% endblock title %}
+{% block content %}
+<h1>{% trans "ticket"|capfirst %} #{{ object.pk }}: {{ object.subject }}</h1>
+<p>{% trans "status"|capfirst %}: {{ object.get_status_display }}</p>
+<p>{% trans "sent at"|capfirst %} {{ object.sent_at }} {% trans "by" %} {{ object.sender }}</p>
+<div class="user-content">{{ object.body|linebreaks }}</div>
+<form action="{{ request.path }}?access_key={{ request.GET.access_key }}" method="post">
+    {% csrf_token %}
+    <p>{% trans "reply here"|capfirst %}:</p>
+    {{ form.as_p }}
+    <p><button type="sutmit">{% trans "send message"|capfirst %}</button></p>
+</form>
+<h3>{% trans "replies"|capfirst %}</h3>
+{% for reply in object.messages.all %}
+    <p>{% trans "from"|capfirst %} {{ reply.sender_name }} 
+        {% trans "to" %} {{ reply.recipient_name }}, 
+        {% trans "sent at" %} {{ reply.sent_at }}</p>
+    <div class="user-content">{{ reply.body|linebreaks }}</div>
+{% endfor %}
+{% endblock content %}

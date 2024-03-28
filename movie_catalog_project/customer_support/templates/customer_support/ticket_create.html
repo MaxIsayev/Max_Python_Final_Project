@@ -1,0 +1,13 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% trans "contact"|capfirst %} {{ block.super }}{% endblock title %}
+{% block content %}
+<h1>{% trans "contact"|capfirst %} TASKer</h1>
+<form action="{{ request.path }}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>
+        <button type="submit">{% trans "send"|capfirst %}</button>
+        <button type="reset">{% trans "clear form"|capfirst %}</button>
+    </p>
+</form>
+{% endblock content %}

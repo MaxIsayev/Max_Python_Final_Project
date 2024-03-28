@@ -72,6 +72,6 @@ Projekto planas:
 
 Projekto papildomas planas:
 
-10) Docker
-12) \/ paginator
+10) \/ customer support
+11) \/ paginator
 

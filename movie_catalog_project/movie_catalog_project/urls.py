@@ -25,7 +25,8 @@ urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
     path('user_profile/', include('user_profile.urls')), 
-    path('accounts/', include('django.contrib.auth.urls')),   
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('support/', include('customer_support.urls')),   
 ]
 
 urlpatterns.extend(static(settings.STATIC_URL, document_root=settings.STATIC_ROOT))

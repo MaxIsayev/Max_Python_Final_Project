@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 18:37+0200\n"
+"POT-Creation-Date: 2024-03-28 18:13+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,7 +49,6 @@ msgid "files and links"
 msgstr "файлы и ссылки"
 
 #: movie_catalog_app/apps.py:10
-#, fuzzy
 #| msgid "movie_catalog_app"
 msgid "movie catalog app"
 msgstr "приложение фильмов"
@@ -69,6 +68,11 @@ msgstr "имя"
 msgid "owner"
 msgstr "владелец"
 
+#: movie_catalog_app/models.py:17 movie_catalog_app/models.py:33
+#: movie_catalog_app/models.py:64
+msgid "description"
+msgstr ""
+
 #: movie_catalog_app/models.py:20
 msgid "movie category"
 msgstr "категория фильмов"
@@ -76,7 +80,7 @@ msgstr "категория фильмов"
 #: movie_catalog_app/models.py:21 movie_catalog_app/templates/base.html:21
 #: movie_catalog_app/templates/movies/movie_category_list.html:2
 #: movie_catalog_app/templates/movies/movie_category_list.html:4
-#: movie_catalog_app/views.py:22 movie_catalog_app/views.py:41
+#: movie_catalog_app/views.py:24 movie_catalog_app/views.py:43
 msgid "movie categories"
 msgstr "категории фильмов"
 
@@ -113,7 +117,7 @@ msgstr "студия"
 
 #: movie_catalog_app/models.py:48 movie_catalog_app/templates/base.html:22
 #: movie_catalog_app/templates/movies/studio_list.html:5
-#: movie_catalog_app/views.py:27
+#: movie_catalog_app/views.py:29
 msgid "studios"
 msgstr "студии"
 
@@ -170,7 +174,7 @@ msgstr "фильм"
 #: movie_catalog_app/templates/base.html:20
 #: movie_catalog_app/templates/movies/movie_category_detail.html:18
 #: movie_catalog_app/templates/movies/movie_list.html:5
-#: movie_catalog_app/views.py:32 movie_catalog_app/views.py:46
+#: movie_catalog_app/views.py:34 movie_catalog_app/views.py:48
 msgid "movies"
 msgstr "фильмы"
 
@@ -206,34 +210,40 @@ msgstr "каталог фильмов"
 msgid "main page"
 msgstr "главная"
 
-#: movie_catalog_app/templates/base.html:29
+#: movie_catalog_app/templates/base.html:23
+msgid "contact"
+msgstr ""
+
+#: movie_catalog_app/templates/base.html:30
 msgid "admin"
 msgstr "админ"
 
-#: movie_catalog_app/templates/base.html:31
+#: movie_catalog_app/templates/base.html:32
+msgid "tickets"
+msgstr ""
+
+#: movie_catalog_app/templates/base.html:34
 msgid "log out"
 msgstr "выйти"
 
-#: movie_catalog_app/templates/base.html:33
+#: movie_catalog_app/templates/base.html:36
 msgid "log in"
 msgstr "войти"
 
-#: movie_catalog_app/templates/base.html:34
+#: movie_catalog_app/templates/base.html:37
 msgid "sign up"
 msgstr "зарегистрироваться"
 
-#: movie_catalog_app/templates/base.html:59
+#: movie_catalog_app/templates/base.html:62
 msgid "community on discord"
 msgstr "сообщество дискорда"
 
 #: movie_catalog_app/templates/movies/index.html:4
-#, fuzzy
 #| msgid "movie catalog"
 msgid "common catalog"
 msgstr "каталог фильмов"
 
 #: movie_catalog_app/templates/movies/index.html:13
-#, fuzzy
 #| msgid "movie catalog"
 msgid "user catalog"
 msgstr "каталог фильмов"
@@ -247,13 +257,11 @@ msgid "nothing here"
 msgstr "здесь ничего"
 
 #: movie_catalog_app/templates/movies/movie_category_create.html:2
-#, fuzzy
 #| msgid "movie category"
 msgid "create a movie category at"
 msgstr "категория фильмов"
 
 #: movie_catalog_app/templates/movies/movie_category_create.html:4
-#, fuzzy
 #| msgid "movie category"
 msgid "create a movie category"
 msgstr "категория фильмов"
@@ -271,7 +279,6 @@ msgid "deleting"
 msgstr "удаление"
 
 #: movie_catalog_app/templates/movies/movie_category_delete.html:4
-#, fuzzy
 #| msgid "movie category"
 msgid "deleting movie category"
 msgstr "категория фильмов"
@@ -281,7 +288,6 @@ msgid "are you sure you want to delete movie category"
 msgstr "вы действительно хотите удалить категорию фильмов"
 
 #: movie_catalog_app/templates/movies/movie_category_delete.html:11
-#, fuzzy
 #| msgid "movie categories"
 msgid "all movie categories"
 msgstr "категории фильмов"
@@ -338,25 +344,21 @@ msgid "editing"
 msgstr "редактируя"
 
 #: movie_catalog_app/templates/movies/movie_category_update.html:4
-#, fuzzy
 #| msgid "movie category"
 msgid "editing movie category"
 msgstr "категория фильмов"
 
 #: movie_catalog_app/templates/movies/movie_create.html:2
-#, fuzzy
 #| msgid "recent movies"
 msgid "create a movie at"
 msgstr "недавние фильмы"
 
 #: movie_catalog_app/templates/movies/movie_create.html:4
-#, fuzzy
 #| msgid "recent movies"
 msgid "create a movie"
 msgstr "недавние фильмы"
 
 #: movie_catalog_app/templates/movies/movie_delete.html:4
-#, fuzzy
 #| msgid "recent movies"
 msgid "deleting movie"
 msgstr "недавние фильмы"
@@ -366,19 +368,16 @@ msgid "are you sure you want to delete movie"
 msgstr "вы действительно хотите удалить фильм"
 
 #: movie_catalog_app/templates/movies/movie_detail.html:21
-#, fuzzy
 #| msgid "video file"
 msgid "video file preview"
 msgstr "видео файл"
 
 #: movie_catalog_app/templates/movies/movie_detail.html:29
-#, fuzzy
 #| msgid "video file"
 msgid "video image"
 msgstr "видео файл"
 
 #: movie_catalog_app/templates/movies/movie_detail.html:35
-#, fuzzy
 #| msgid "YouTube video hash"
 msgid "YouTube preview"
 msgstr "видеохеш Ютюба"
@@ -389,19 +388,16 @@ msgid "like"
 msgstr "нравится"
 
 #: movie_catalog_app/templates/movies/movie_list.html:7
-#, fuzzy
 #| msgid "recent movies"
 msgid "create new movie"
 msgstr "недавние фильмы"
 
 #: movie_catalog_app/templates/movies/movie_list.html:8
-#, fuzzy
 #| msgid "movie category"
 msgid "create new category"
 msgstr "категория фильмов"
 
 #: movie_catalog_app/templates/movies/movie_list.html:17
-#, fuzzy
 #| msgid "movie category"
 msgid "filter by movie category"
 msgstr "категория фильмов"
@@ -440,7 +436,6 @@ msgid "no movies Found"
 msgstr "фильмы не найдены"
 
 #: movie_catalog_app/templates/movies/movie_update.html:4
-#, fuzzy
 #| msgid "recent movies"
 msgid "editing movie"
 msgstr "недавние фильмы"
@@ -466,56 +461,53 @@ msgid "create new studio"
 msgstr "создать новую студию"
 
 #: movie_catalog_app/templates/movies/studio_list.html:42
-#, fuzzy
 #| msgid "no movies Found"
 msgid "no studios Found"
 msgstr "фильмы не найдены"
 
 #: movie_catalog_app/templates/movies/studio_update.html:4
-#, fuzzy
 #| msgid "studio"
 msgid "editing studio"
 msgstr "студия"
 
-#: movie_catalog_app/views.py:20
-#, fuzzy
+#: movie_catalog_app/views.py:22
 #| msgid "users:"
 msgid "users"
 msgstr "пользователи:"
 
-#: movie_catalog_app/views.py:117
+#: movie_catalog_app/views.py:126
 msgid "movie category created successfully"
 msgstr "категория фильмов создана успешно"
 
-#: movie_catalog_app/views.py:134
+#: movie_catalog_app/views.py:143
 msgid "movie category updated successfully"
 msgstr "категория фильмов отредактирована успешно"
 
-#: movie_catalog_app/views.py:145
+#: movie_catalog_app/views.py:154
 msgid "movie category deleted successfully"
 msgstr "категория фильмов удалена успешно"
 
-#: movie_catalog_app/views.py:156
+#: movie_catalog_app/views.py:165
 msgid "movie created successfully"
 msgstr "фильм создан успешно"
 
-#: movie_catalog_app/views.py:169
+#: movie_catalog_app/views.py:178
 msgid "movie edited successfully"
 msgstr "фильм отредактирован успешно"
 
-#: movie_catalog_app/views.py:180
+#: movie_catalog_app/views.py:189
 msgid "movie deleted successfully"
 msgstr "фильм удален успешно"
 
-#: movie_catalog_app/views.py:226
+#: movie_catalog_app/views.py:242
 msgid "studio created successfully"
 msgstr "студия создана успешно"
 
-#: movie_catalog_app/views.py:239
+#: movie_catalog_app/views.py:255
 msgid "studio edited successfully"
 msgstr "студия отредактирована успешно"
 
-#: movie_catalog_app/views.py:250
+#: movie_catalog_app/views.py:266
 msgid "studio deleted successfully"
 msgstr "студия удалена успешно"
 
