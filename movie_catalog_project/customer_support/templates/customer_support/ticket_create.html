@@ -1,7 +1,7 @@
 {% extends "base.html" %}{% load i18n %}
 {% block title %}{% trans "contact"|capfirst %} {{ block.super }}{% endblock title %}
 {% block content %}
-<h1>{% trans "contact"|capfirst %} TASKer</h1>
+<h1>{% trans "contact"|capfirst %} Movie Catalog</h1>
 <form action="{{ request.path }}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
