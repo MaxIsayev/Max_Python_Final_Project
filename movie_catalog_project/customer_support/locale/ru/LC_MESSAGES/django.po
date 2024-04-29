@@ -28,8 +28,8 @@ msgstr "отметить прочитанными"
 #, python-format
 msgid "%d ticket has been made as new"
 msgid_plural "%d tickets have been made as new"
-msgstr[0] "билет сделан как новый"
-msgstr[1] "билеты сделаны как новые"
+msgstr[0] "%d билет сделан как новый"
+msgstr[1] "%d билеты сделаны как новые"
 
 #: customer_support/admin.py:66
 msgid "mark read"
@@ -39,8 +39,8 @@ msgstr "отметить как прочитанный"
 #, python-format
 msgid "%d ticket has been marked as read"
 msgid_plural "%d tickets have been marked as read"
-msgstr[0] "билет отмечен как прочмианный"
-msgstr[1] "билеты отмечены как прочмианные"
+msgstr[0] "%d билет отмечен как прочмианный"
+msgstr[1] "%d билеты отмечены как прочмианные"
 
 #: customer_support/admin.py:75
 msgid "set processing"
@@ -61,8 +61,8 @@ msgstr "закрыть"
 #, python-format
 msgid "%d ticket has been closed"
 msgid_plural "%d tickets have been closed"
-msgstr[0] "билет закрыт"
-msgstr[1] "билеты закрыты"
+msgstr[0] "%d билет закрыт"
+msgstr[1] "%d билеты закрыты"
 
 #: customer_support/models.py:8
 msgid "-- please choose --"
